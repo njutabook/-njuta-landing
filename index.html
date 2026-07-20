@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>njuta — the seasonal memory book that makes itself</title>
+<meta name="description" content="the seasonal memory book that makes itself. njuta curates the moments that matter from your camera roll and mails them to you as a beautifully bound book — with room for your own words.">
+<!-- ============================================================
+     NJUTA LANDING v4 — static, Cloudflare Pages ready (deploy this folder)
+     FONTS:
+       - Jitzu (script/display): drop jitzu.woff2 into /assets and it
+         activates automatically via @font-face below. Until then, the
+         page falls back to Cormorant italic so nothing looks broken.
+       - Roboto (all content text): loaded from Google Fonts. DECIDED.
+     BEFORE APP STORE SUBMISSION:
+       1. /privacy and /terms must be live pages (required URLs in App Store Connect)
+       2. Replace App Store badge placeholders with Apple's official badge artwork
+          https://developer.apple.com/app-store/marketing/guidelines/ + real app link
+       3. assets/spread.png contains family photos — consent decision pending
+     TRACKING (per project doc):
+       - EXPERIMENTS in this file: footer sign-off "go njuta your life.",
+         time-capsule line, njuta-as-verb bridge in "inside the book"
+       - Moment count intentionally UNNAMED pending vendor COGS quotes
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* Jitzu script — activates when jitzu.woff2 is added to /assets */
+  @font-face{
+    font-family:'Jitzu';
+    src:url('assets/jitzu.woff2') format('woff2');
+    font-display:swap;
+  }
+  :root{
+    --berry:#3A1F5A;            /* anchor. never changes. */
+    --berry-deep:#2C1745;
+    --candy:#C4688F;            /* sparkler-hour candy accent, from the sleeve */
+    --ink:#33254A;
+    --paper:#FBF8F3;
+    --paper-warm:#F6EFE6;
+    --gold:#D9A441;             /* mother-color, used sparingly */
+    --dusk-a:#F3D9CD;
+    --dusk-b:#DCCEEA;
+    --line:rgba(58,31,90,.14);
+    --radius:14px;
+    --max:1080px;
+    --script:'Jitzu','Cormorant',serif;   /* curvy text = Jitzu */
+    --body:'Roboto',sans-serif;           /* content text = Roboto (decided) */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:var(--body);
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-size:16.5px;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--berry);color:#fff}
+  h1,h2,h3{font-family:var(--script);font-style:italic;color:var(--berry);font-weight:700}
+  a{color:var(--berry)}
+  img{max-width:100%;display:block}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,248,243,.9);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .wordmark{
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:1.7rem;color:var(--berry);text-decoration:none;letter-spacing:.5px;
+  }
+  .nav-links{display:flex;gap:28px;align-items:center;list-style:none}
+  .nav-links a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--ink)}
+  .nav-links a:hover{color:var(--berry)}
+  .btn{
+    display:inline-block;background:var(--berry);color:#fff;text-decoration:none;
+    padding:12px 26px;border-radius:100px;font-weight:500;font-size:.95rem;
+    letter-spacing:.02em;transition:background .18s ease,transform .18s ease;
+    font-family:var(--body);
+  }
+  .btn:hover{background:var(--berry-deep);transform:translateY(-1px)}
+  .btn-sm{padding:9px 20px;font-size:.88rem}
+  .btn-ghost{background:transparent;color:var(--berry);border:1.5px solid var(--berry)}
+  .btn-ghost:hover{background:var(--berry);color:#fff}
+
+  /* ---------- hero ---------- */
+  header.hero{
+    background:
+      radial-gradient(120% 90% at 85% 0%, var(--dusk-b) 0%, transparent 55%),
+      radial-gradient(110% 80% at 5% 100%, var(--dusk-a) 0%, transparent 50%),
+      var(--paper);
+    padding:84px 0 72px;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .hero h1{
+    font-size:clamp(2.7rem,5.6vw,4.4rem);
+    line-height:1.05;
+    margin-bottom:24px;letter-spacing:-.01em;
+    max-width:12ch;
+  }
+  .hero p.sub{max-width:48ch;margin-bottom:30px;font-size:1.02rem}
+  .hero p.sub strong{color:var(--berry);font-weight:500}
+  .hero-ctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+
+  /* Apple badge — PLACEHOLDER. Swap for official Apple artwork before launch. */
+  .appstore-badge{
+    display:inline-flex;align-items:center;gap:10px;background:#000;color:#fff;
+    border-radius:10px;padding:9px 18px;text-decoration:none;line-height:1.15;
+    font-family:var(--body);
+  }
+  .appstore-badge svg{width:22px;height:26px;flex-shrink:0}
+  .appstore-badge .small{display:block;font-size:.62rem;letter-spacing:.02em}
+  .appstore-badge .big{display:block;font-size:1.05rem;font-weight:700}
+
+  /* dictionary card */
+  .dict{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 32px;box-shadow:0 18px 50px -24px rgba(58,31,90,.35);
+    max-width:380px;justify-self:end;
+  }
+  .dict .word{font-family:var(--script);font-style:italic;font-weight:700;font-size:2.2rem;color:var(--berry)}
+  .dict .phon{font-size:.9rem;opacity:.6;margin-bottom:12px;font-style:italic}
+  .dict .def{font-size:.96rem;margin-bottom:14px}
+  .dict .gloss{font-family:var(--script);font-style:italic;font-size:1.3rem;color:var(--gold);font-weight:700}
+
+  /* ---------- trust strip ---------- */
+  .trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+  .trust-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+  .trust-item{padding:30px 28px}
+  .trust-item + .trust-item{border-left:1px solid var(--line)}
+  .trust-item h3{font-size:1.35rem;margin-bottom:6px}
+  .trust-item p{font-size:.88rem;opacity:.85}
+
+  /* ---------- sections ---------- */
+  section{padding:88px 0}
+  .sec-eyebrow{
+    font-size:.74rem;font-weight:500;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--gold);margin-bottom:12px;
+  }
+  h2{font-size:clamp(2rem,4vw,2.9rem);line-height:1.1;margin-bottom:14px}
+  .sec-lede{max-width:54ch;font-size:1.02rem;margin-bottom:48px}
+
+  /* how it works */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px}
+  .step .num{
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:2.4rem;color:var(--gold);line-height:1;margin-bottom:14px;display:block;
+  }
+  .step h3{font-size:1.6rem;margin-bottom:10px}
+  .step p{font-size:.93rem}
+  .step p + p{margin-top:10px;opacity:.75;font-size:.86rem}
+
+  /* season logic band */
+  .season-why{
+    margin-top:64px;text-align:center;
+    border-top:1px solid var(--line);padding-top:48px;
+  }
+  .season-why .q{
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:clamp(1.6rem,3vw,2.2rem);color:var(--berry);margin-bottom:10px;
+  }
+  .season-why .a{font-size:1.02rem;opacity:.85;max-width:52ch;margin:0 auto}
+  .season-why .a em{color:var(--candy);font-style:normal;font-weight:500}
+
+  /* ---------- the spread (annotated image) ---------- */
+  .spread-sec{background:var(--paper-warm);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .annotated{position:relative;border-radius:12px;box-shadow:0 30px 70px -28px rgba(58,31,90,.4)}
+  .annotated img{border-radius:12px}
+  .note-label{
+    position:absolute;
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:clamp(1rem,1.8vw,1.35rem);color:var(--berry);
+    background:rgba(251,248,243,.92);border:1px solid var(--line);
+    padding:8px 16px 7px;border-radius:100px;
+    box-shadow:0 8px 24px -10px rgba(58,31,90,.35);
+    white-space:nowrap;
+  }
+  .note-label::after{
+    content:"";position:absolute;width:9px;height:9px;border-radius:50%;
+    background:var(--candy);
+  }
+  .nl-words{top:6%;left:3%}
+  .nl-words::after{bottom:-16px;left:42%}
+  .nl-place{bottom:8%;left:22%}
+  .nl-place::after{top:50%;right:-16px;transform:translateY(-50%)}
+  .nl-photo{top:8%;right:4%}
+  .nl-photo::after{bottom:-16px;left:50%}
+  .note-chips{display:none}
+
+  /* njuta-as-verb bridge (EXPERIMENT) */
+  .verb-bridge{
+    margin-top:52px;text-align:center;max-width:640px;margin-left:auto;margin-right:auto;
+  }
+  .verb-bridge .bridge{
+    font-size:1.05rem;opacity:.9;
+  }
+  .verb-bridge .bridge strong{color:var(--berry);font-weight:500}
+  .verb-bridge .capsule{
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--candy);
+    margin-top:18px;
+  }
+
+  /* ---------- the book ---------- */
+  .book{background:var(--berry);color:#fff;border-radius:24px;overflow:hidden}
+  .book-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 56px}
+  .book h2{color:#fff}
+  .book .lede{color:rgba(255,255,255,.85);max-width:42ch;font-size:.98rem;margin-bottom:30px}
+  .book ul{list-style:none}
+  .book li{
+    font-family:var(--script);font-style:italic;font-weight:700;
+    font-size:clamp(1.25rem,2.2vw,1.6rem);color:#fff;
+    padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);
+  }
+  .book li:first-child{border-top:1px solid rgba(255,255,255,.18)}
+  .book li span{color:var(--gold)}
+  .book-visual{border-radius:12px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+
+  /* ---------- pricing ledger ---------- */
+  .ledger{max-width:640px;margin:0 auto}
+  .ledger-head{text-align:center;margin-bottom:44px}
+  .ledger-head .punch{font-family:var(--script);font-style:italic;font-size:1.4rem;color:var(--berry);font-weight:700}
+  .ledger table{width:100%;border-collapse:collapse}
+  .ledger td{padding:18px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+  .ledger .item{font-weight:500;font-size:.98rem}
+  .ledger .note{font-size:.83rem;opacity:.65;display:block;margin-top:2px}
+  .ledger .price{text-align:right;font-family:var(--script);font-style:italic;font-weight:700;font-size:1.5rem;color:var(--ink);white-space:nowrap}
+  .ledger .lifespan{text-align:right;font-size:.8rem;opacity:.6;display:block;font-family:var(--body);font-style:normal;font-weight:400}
+  .ledger tr.you td{border-bottom:none;padding-top:28px}
+  .ledger tr.you .item{font-family:var(--script);font-style:italic;font-size:1.6rem;color:var(--berry);font-weight:700}
+  .ledger tr.you .price{color:var(--berry);font-size:2rem}
+  .ledger tr.you .lifespan{color:var(--gold);opacity:1;font-weight:500}
+  .price-meta{text-align:center;margin-top:34px;font-size:.95rem}
+  .price-meta strong{color:var(--berry);font-weight:500}
+  .price-meta .permonth{display:block;margin-top:6px;font-size:.85rem;opacity:.65}
+  .price-cta{text-align:center;margin-top:26px}
+
+  /* ---------- testimonials: intentionally omitted until real books ship ---------- */
+
+  /* ---------- final cta ---------- */
+  .final{
+    background:
+      radial-gradient(100% 120% at 50% 120%, var(--dusk-b) 0%, transparent 60%),
+      var(--paper-warm);
+    text-align:center;border-top:1px solid var(--line);
+  }
+  .final h2{font-size:clamp(2.4rem,5vw,3.6rem)}
+  .final p{max-width:46ch;margin:0 auto 32px}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--berry);color:rgba(255,255,255,.8);padding:56px 0 40px;font-size:.9rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  footer .wordmark{color:#fff;font-size:1.5rem}
+  footer p{margin-top:12px;max-width:32ch;color:rgba(255,255,255,.65)}
+  footer h4{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;font-weight:500;font-family:var(--body)}
+  footer ul{list-style:none}
+  footer li{margin-bottom:9px}
+  footer a{color:rgba(255,255,255,.85);text-decoration:none}
+  footer a:hover{color:#fff;text-decoration:underline}
+  .foot-legal{border-top:1px solid rgba(255,255,255,.15);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;color:rgba(255,255,255,.5);font-size:.82rem}
+  .foot-legal .signoff{font-family:var(--script);font-style:italic;font-weight:700;font-size:1.05rem;color:var(--gold)}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .btn:hover{transform:none}
+  }
+
+  /* ---------- responsive ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero h1{max-width:none}
+    .dict{justify-self:start}
+    .trust-grid{grid-template-columns:1fr}
+    .trust-item + .trust-item{border-left:none;border-top:1px solid var(--line)}
+    .steps{grid-template-columns:1fr}
+    .book-inner{grid-template-columns:1fr;padding:44px 32px}
+    .foot-grid{grid-template-columns:1fr;gap:28px}
+    .nav-links li.hide-m{display:none}
+  }
+  @media (max-width:700px){
+    .note-label{display:none}
+    .note-chips{
+      display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;
+    }
+    .note-chips span{
+      font-family:var(--script);font-style:italic;font-weight:700;
+      font-size:1.05rem;color:var(--berry);
+      background:#fff;border:1px solid var(--line);
+      padding:7px 15px 6px;border-radius:100px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="wordmark" href="#top">njuta</a>
+    <ul class="nav-links">
+      <li class="hide-m"><a href="#how">how it works</a></li>
+      <li class="hide-m"><a href="#book">the book</a></li>
+      <li class="hide-m"><a href="#pricing">money stuff</a></li>
+      <li><a class="btn btn-sm" href="#get">let me njuta</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>the seasonal memory book that makes itself.</h1>
+      <p class="sub">for everyone whose <strong>best moments never leave their camera roll</strong> — njuta does the thing you've been meaning to do. one beautifully bound book per season, curated from your photos and mailed to your door. no scrolling, no sorting, no choosing, no work.</p>
+      <div class="hero-ctas">
+        <!-- PLACEHOLDER BADGE: replace with official Apple App Store badge + real link before launch -->
+        <a class="appstore-badge" href="#get" aria-label="Download on the App Store">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span><span class="small">download on the</span><span class="big">App Store</span></span>
+        </a>
+        <a class="btn btn-ghost" href="#how">see how it works</a>
+      </div>
+    </div>
+
+    <aside class="dict reveal" aria-label="what njuta means">
+      <div class="word">njuta</div>
+      <div class="phon">[nyoo-tah] &middot; swedish, verb</div>
+      <p class="def">to truly enjoy something — deeply, fully, without distraction.</p>
+      <p class="gloss">enjoy. appreciate.</p>
+    </aside>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap trust-grid">
+    <div class="trust-item">
+      <h3>private by design</h3>
+      <p>your photos are yours. no selling data, no sketchy surprises. full privacy policy at launch.</p>
+    </div>
+    <div class="trust-item">
+      <h3>love it or we'll make it right</h3>
+      <p>if your book arrives and something's off, tell us. we stand behind every copy.</p>
+    </div>
+    <div class="trust-item">
+      <h3>$39 per book, billed quarterly</h3>
+      <p>never on sale — because it's priced honestly the first time.</p>
+    </div>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <p class="sec-eyebrow">how it works</p>
+    <h2>let us njuta your life</h2>
+    <p class="sec-lede">life isn't only the big milestones that make it to your socials. it's your average tuesdays — the quiet corners gathering dust in your camera roll. we find them.</p>
+    <div class="steps">
+      <div class="step reveal">
+        <span class="num">1.</span>
+        <h3>press buttons</h3>
+        <p>connect your camera roll, say yes / no / maybe to a few things.</p>
+        <p>all the necessary stuff. no sketchy surprises.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">2.</span>
+        <h3>sit back</h3>
+        <p>every season, we curate the moments that matter — from the life you actually lived, not just the one you posted.</p>
+        <p>you make no decisions. unless you really want to.</p>
+      </div>
+      <div class="step reveal">
+        <span class="num">3.</span>
+        <h3>njuta</h3>
+        <p>your book arrives in the mail — a new ritual of enjoying the beauty in your everyday life.</p>
+        <p>honoring your tuesdays, and more.</p>
+      </div>
+    </div>
+
+    <div class="season-why reveal">
+      <p class="q">why a season?</p>
+      <p class="a">a season is the natural size of a memory — <em>long enough to live a little, short enough to remember all of it.</em> that's why every book gets a season's name, not a date range. four a year, and your shelf becomes the story.</p>
+    </div>
+  </div>
+</section>
+
+<section class="spread-sec" id="inside">
+  <div class="wrap">
+    <p class="sec-eyebrow">inside the book</p>
+    <h2>one moment at a time.</h2>
+    <p class="sec-lede">the moments that matter, one per spread — no collages, no clutter. because the whole point is to actually see the life you lived.</p>
+
+    <div class="annotated reveal">
+      <img src="assets/spread.png" alt="an open njuta book: the right page holds a single photo of a walk under palm trees; the left page shows the date, the place, and a handwritten note about the moment">
+      <span class="note-label nl-words">room for your words</span>
+      <span class="note-label nl-place">the date &amp; the place</span>
+      <span class="note-label nl-photo">one photo, one page</span>
+    </div>
+    <div class="note-chips" aria-hidden="true">
+      <span>one photo, one page</span>
+      <span>the date &amp; the place</span>
+      <span>room for your words</span>
+    </div>
+
+    <!-- EXPERIMENT: njuta-as-verb bridge + time-capsule line -->
+    <div class="verb-bridge reveal">
+      <p class="bridge">this is what njuta means, in practice: <strong>a pen, a quiet evening, and a season you actually lived</strong> — off autopilot, one page at a time. write what you remember. future you gets the moment <em>and</em> your reliving of it.</p>
+      <p class="capsule">a time capsule you get to open early.</p>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap">
+    <div class="book">
+      <div class="book-inner">
+        <div>
+          <p class="sec-eyebrow">the book</p>
+          <h2>made to be held,<br>not scrolled.</h2>
+          <p class="lede">digest-sized, dressed for its season, and at home on your coffee table.</p>
+          <ul>
+            <li class="reveal">a real hardcover</li>
+            <li class="reveal">thick matte pages</li>
+            <li class="reveal">a seasonal sleeve to match</li>
+            <li class="reveal"><span>every season, a new spine on your shelf</span></li>
+          </ul>
+        </div>
+        <div class="book-visual reveal">
+          <img src="assets/sleeve.png" alt="a njuta summer 2026 book sliding out of its berry-pink illustrated seasonal sleeve" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap ledger">
+    <div class="ledger-head">
+      <p class="sec-eyebrow">money stuff</p>
+      <h2>the average cost of treating yourself.</h2>
+      <p class="punch">this one just lasts longer.</p>
+    </div>
+    <table>
+      <tbody>
+        <tr class="reveal">
+          <td><span class="item">one nice candle</span><span class="note">a cozy treat for you and your home.</span></td>
+          <td><span class="price">$42</span><span class="lifespan">gone in a month</span></td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="item">a lush bouquet of flowers</span><span class="note">brightens up your kitchen.</span></td>
+          <td><span class="price">$30</span><span class="lifespan">gone in a week</span></td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="item">a lunch out with pals</span><span class="note">yummy, and quality time.</span></td>
+          <td><span class="price">$28</span><span class="lifespan">gone in an afternoon</span></td>
+        </tr>
+        <tr class="reveal">
+          <td><span class="item">two cocktails</span><span class="note">honestly, just the two.</span></td>
+          <td><span class="price">$34</span><span class="lifespan">gone in an hour</span></td>
+        </tr>
+        <tr class="you reveal">
+          <td><span class="item">your njuta book</span><span class="note">a season of your life — printed, bound, and yours to write in.</span></td>
+          <td><span class="price">$39</span><span class="lifespan">here to stay</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="price-meta">
+      <strong>$39 per book, billed quarterly.</strong> love it or we'll make it right.
+      <span class="permonth">that works out to $13 a month for a season you'll never lose.</span>
+    </p>
+    <div class="price-cta"><a class="btn" href="#get">ok fine, sign me up</a></div>
+  </div>
+</section>
+
+<section class="final" id="get">
+  <div class="wrap">
+    <h2>start with this season.</h2>
+    <p>the moments are already in your camera roll.</p>
+    <!-- PLACEHOLDER BADGE: replace with official Apple App Store badge + real link before launch -->
+    <a class="appstore-badge" href="#" aria-label="Download on the App Store">
+      <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+      <span><span class="small">download on the</span><span class="big">App Store</span></span>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <span class="wordmark">njuta</span>
+        <p>the seasonal memory book that makes itself.</p>
+      </div>
+      <div>
+        <h4>njuta</h4>
+        <ul>
+          <li><a href="#how">how it works</a></li>
+          <li><a href="#inside">inside the book</a></li>
+          <li><a href="#pricing">pricing</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>support</h4>
+        <ul>
+          <!-- These three are required live URLs for App Store Connect submission -->
+          <li><a href="mailto:hello@njutabook.com">contact us</a></li>
+          <li><a href="/privacy">privacy policy</a></li>
+          <li><a href="/terms">terms &amp; conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <span>&copy; 2026 njuta, llc</span>
+      <!-- EXPERIMENT: sign-off candidate, not a decided element -->
+      <span class="signoff">go njuta your life.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
