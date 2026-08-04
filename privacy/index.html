@@ -332,7 +332,7 @@
 <main>
   <div class="eyebrow">Legal</div>
   <h1 id="top">Privacy Policy</h1>
-  <p class="updated">Last updated July 24, 2026</p>
+  <p class="updated">Last updated August 3, 2026</p>
 
   <p class="lede">
     This Privacy Policy for Njuta LLC ("njuta," "we," "us," or "our") describes how and why
@@ -424,7 +424,7 @@
     <ul>
       <li><strong>Name and shipping address.</strong> Collected when you claim a season, used to print your book's shipping label and deliver it to you.</li>
       <li><strong>Email address.</strong> Collected if you choose to sign in with Apple (you may use Apple's private relay email), if you join our website waitlist, or if you email us. Used for service emails (such as "your season has wrapped"), account security, and responding to you.</li>
-      <li><strong>Book photos.</strong> The photos you approve for your printed book — approximately 30 per season — plus any photos you later swap in. See Section 2 for a complete description of how photos are handled. These photos may contain embedded metadata (such as the date, time, and location where a photo was taken); we use this metadata only to produce your book — for example, to arrange your book chronologically and to print the date, day, and general city or state where a photo was taken alongside it — and for no other purpose.</li>
+      <li><strong>Book photos.</strong> The photos you approve for your printed book — approximately 30 per season — plus any photos you later swap in. See Section 2 for a complete description of how photos are handled. Before upload, the app removes the embedded metadata from each photo file — including GPS coordinates. So that we can print the caption on each page, the app separately sends each photo's capture date and a general place name (such as a city and state), worked out on your device; exact coordinates never reach our servers. We use this caption information only to produce your book — to arrange it chronologically and to print the date, day, and place alongside each photo — and for no other purpose.</li>
       <li><strong>Purchase and subscription information.</strong> Records of what you purchased, the amount, when, the season it covers, and your subscription status.</li>
       <li><strong>Communications.</strong> The contents of messages you send us, such as support emails and feedback.</li>
     </ul>
@@ -436,7 +436,7 @@
     <h3>Information collected automatically</h3>
     <div class="in-short"><strong>In Short:</strong> We collect limited technical and usage information necessary to operate, secure, and improve the Services.</div>
     <ul>
-      <li><strong>App usage analytics.</strong> We use TelemetryDeck, a privacy-focused analytics service, to count anonymized product events — for example, that a book was claimed, or that a user reached a given step in setup. TelemetryDeck does not receive your identity, your photos, your precise location, or any advertising identifier, and we do not use device fingerprinting or the IDFA. We use these anonymized counts only to understand and improve the app.</li>
+      <li><strong>App usage analytics.</strong> We use TelemetryDeck, a privacy-focused analytics service, to count product events — for example, that a book was claimed, or that a user reached a given step in setup. These signals include an anonymized device identifier (a salted, one-way hash that we cannot reverse to your device or identity) and basic device information such as model, operating system version, locale, and screen size. TelemetryDeck does not receive your identity, your photos, your location, or any advertising identifier; we do not use the IDFA; analytics are not linked to your account; and we do not use analytics for advertising or tracking across other apps or websites. We use this data only to understand and improve the app.</li>
       <li><strong>Server and security logs.</strong> Like nearly every online service, our infrastructure automatically records technical information when your device communicates with our servers — such as IP address, request timestamps, and device/OS type — used for security, fraud prevention, rate limiting, and troubleshooting. Our logs are designed to never contain your photos or photo content, and we minimize personal information in them.</li>
       <li><strong>Website information.</strong> When you visit njutabook.com, our website host and the third-party services embedded in specific features (our waitlist form and payment checkout) may set strictly necessary cookies and receive standard technical data. See Section 6 and our Cookie Policy.</li>
     </ul>
@@ -461,7 +461,7 @@
     <div class="in-short"><strong>In Short:</strong> Your library never leaves your phone. Only the photos you approve for printing are uploaded, they are used only to make your book, and a human reviews the final print file before production. Uploaded source photos are deleted 30 days after your book ships; your finished book file is kept while your account exists so your shelf and reprints always work, and is deleted when you delete your account.</div>
     <p>This section describes the complete life cycle of your photos, because it is the heart of both the product and this policy.</p>
     <p><strong>On your device.</strong> When you grant photo access, njuta scans and sorts your library — analyzing image quality, detecting faces, grouping similar shots, recognizing which people appear most often in your photos, and screening potentially sensitive images out of view — entirely on your iPhone, using Apple's on-device frameworks. No photo, thumbnail, face data, or analysis result from this process is transmitted to us or to anyone else. Face-recognition groupings exist only on your device, are used only to improve which photos are chosen for you, and are never uploaded. If you never claim a book, nothing about your photos ever leaves your device.</p>
-    <p><strong>When you claim a season.</strong> After you approve your book and pay, the app uploads the approved photos (approximately 30) to our servers over an encrypted connection, so that a printable copy of your book exists even if you never open the app again. If you later change your book — including during the adjustment window after your season ends — the app quietly uploads only the changed photos. Uploaded photos are stored in private, encrypted storage that is accessible only through short-lived, authenticated links scoped to your account.</p>
+    <p><strong>When you claim a season.</strong> After you approve your book and pay, the app uploads the approved photos (approximately 30) to our servers over an encrypted connection, so that a printable copy of your book exists even if you never open the app again. Before each photo is uploaded, the app strips its embedded metadata — including GPS coordinates — from the file, and sends only the photo itself along with a capture date and a general place name derived on your device for the printed caption. If you later change your book — including during the adjustment window after your season ends — the app quietly uploads only the changed photos. Uploaded photos are stored in private, encrypted storage that is accessible only through short-lived, authenticated links scoped to your account.</p>
     <p><strong>What we use uploaded photos for.</strong> One thing: producing and shipping your printed book. We do not use your photos to train machine-learning models, we do not analyze them for advertising or profiling, we do not share them with any artificial-intelligence service, and we do not sell or license them. You retain all rights you have in your photos; you grant us only the limited permission needed to store, format, review, print, and ship them as your book.</p>
     <p><strong>Human review before printing.</strong> Before each season's books are sent to production, authorized Njuta personnel review the final print files. This review exists to (a) ensure print quality, and (b) screen for content that we or our print partner cannot lawfully or contractually print (for example, sexually explicit imagery or content that is illegal to reproduce). This is the only routine circumstance in which a person at Njuta views your photos. Personnel performing this review are bound by confidentiality obligations. We may also access your uploaded photos when you ask us to (for example, a support request about your order) or where required by law.</p>
     <p><strong>Locking and printing.</strong> At the close of your season's adjustment window, your book is locked and rendered into a print file. The print file and shipping details are provided to our print partner solely to print and ship your book.</p>
@@ -532,7 +532,7 @@
           </tr>
           <tr>
             <td>TelemetryDeck (analytics)</td>
-            <td>Anonymized product events only — no identity, no photos, no advertising identifiers</td>
+            <td>Anonymized product events with a salted, one-way device identifier and basic device info — no identity, no photos, no location, no advertising identifiers</td>
             <td>To help us understand app usage in aggregate</td>
           </tr>
           <tr>
@@ -559,7 +559,7 @@
     <h2><span class="num">6.</span> Do we use cookies and other tracking technologies?</h2>
     <div class="in-short"><strong>In Short:</strong> Our website uses only strictly necessary cookies from two vendors (Formspree and Stripe). No analytics, advertising, or tracking cookies. The app contains no cookies, ad trackers, or advertising SDKs.</div>
     <p>On njutabook.com, cookies may be set only by the third-party services that power specific site features: Formspree (when you join the waitlist) and Stripe (when you make a payment, including via Apple Pay). These are necessary for those features to function securely. We do not currently use functional, analytics, or advertising cookies on the website; if that ever changes, we will update our Cookie Policy and this policy first.</p>
-    <p>In the app, there are no cookies, no advertising SDKs, no device fingerprinting, and no advertising identifiers. The only third-party measurement is the anonymized TelemetryDeck analytics described in Section 1.</p>
+    <p>In the app, there are no cookies, no advertising SDKs, and no advertising identifiers. The only third-party measurement is the TelemetryDeck analytics described in Section 1, which uses an anonymized, salted device identifier — never for advertising or cross-app tracking.</p>
     <p>Full details, including your choices, are in our <a href="https://njutabook.com/cookies/">Cookie Policy</a>.</p>
     <a class="back-to-top" href="#top">↑ Back to top</a>
   </section>
@@ -644,7 +644,7 @@
           <tr><td>D. Commercial information</td><td>Purchase and subscription records</td><td class="yes">YES</td></tr>
           <tr><td>E. Biometric information</td><td>Fingerprints, faceprints, voiceprints</td><td class="no">NO — Face ID and face-recognition features run entirely on your device; we never receive biometric data</td></tr>
           <tr><td>F. Internet or other similar network activity</td><td>Browsing history, interactions with ads</td><td class="no">NO — we collect only anonymized in-app product events and standard server security logs</td></tr>
-          <tr><td>G. Geolocation data</td><td>Device location</td><td class="no">NO — we do not collect device location; photos you approve may contain embedded metadata (such as capture date and general location), which we use only to produce your book</td></tr>
+          <tr><td>G. Geolocation data</td><td>Device location</td><td class="no">NO — we do not collect device location, and the app strips embedded location metadata (GPS coordinates) from your photos before upload; we receive only a capture date and a general place name, derived on your device, used solely to caption your book</td></tr>
           <tr><td>H. Audio, electronic, visual, or similar information</td><td>Photographs</td><td class="yes">YES — solely the photos you approve for your printed book</td></tr>
           <tr><td>I. Professional or employment-related information</td><td>Job title, work history</td><td class="no">NO</td></tr>
           <tr><td>J. Education information</td><td>Student records</td><td class="no">NO</td></tr>
