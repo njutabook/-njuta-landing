@@ -1,0 +1,19 @@
+---
+layout: default
+title: njuta journal
+description: Notes on photo books, memory, and savoring the ordinary in-between moments — from the makers of njuta.
+---
+<div class="listing">
+  <p class="eyebrow">the journal</p>
+  <h1>Notes on savoring the little things</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      {% if post.description %}<p class="excerpt">{{ post.description }}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

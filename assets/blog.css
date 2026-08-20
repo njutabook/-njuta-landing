@@ -1,0 +1,147 @@
+/* njuta journal — brand tokens
+   berry #3A1F5A · lavender #B58CE8 · orchid #EB87C8 · linen #FDF9F1
+   Display: Fraunces (web stand-in until a licensed web display face is chosen)
+   Body: Roboto (matches print interior) */
+
+:root {
+  --berry: #3A1F5A;
+  --lavender: #B58CE8;
+  --orchid: #EB87C8;
+  --linen: #FDF9F1;
+  --linen-warm: #F8E5E1;
+  --measure: 42rem;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--linen);
+  color: var(--berry);
+  font-family: 'Roboto', system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 0;
+}
+
+.wordmark {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--berry);
+  text-decoration: none;
+}
+
+.site-header nav a {
+  color: var(--berry);
+  text-decoration: none;
+  border-bottom: 2px solid var(--orchid);
+  padding-bottom: 2px;
+}
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.eyebrow {
+  color: var(--orchid);
+  text-transform: lowercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 600;
+  font-size: clamp(1.85rem, 5vw, 2.6rem);
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.3;
+  margin: 2.25rem 0 0.75rem;
+}
+
+.post-date {
+  color: var(--lavender);
+  font-size: 0.9375rem;
+  margin: 0 0 2rem;
+}
+
+a { color: var(--berry); text-decoration-color: var(--orchid); text-decoration-thickness: 2px; }
+a:hover { color: var(--orchid); }
+a:focus-visible { outline: 3px solid var(--lavender); outline-offset: 3px; border-radius: 2px; }
+
+.post img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.post-cta {
+  margin-top: 3.5rem;
+  padding: 1.5rem 1.75rem;
+  background: linear-gradient(135deg, var(--linen-warm), var(--linen));
+  border: 1px solid var(--lavender);
+  border-radius: 12px;
+}
+.post-cta p { margin: 0; }
+
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 2.5rem 0 0;
+}
+
+.post-list li {
+  margin-bottom: 2rem;
+}
+
+.post-list time {
+  display: block;
+  color: var(--lavender);
+  font-size: 0.875rem;
+  margin-bottom: 0.2rem;
+}
+
+.post-list a {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 1.35rem;
+  text-decoration: none;
+}
+.post-list a:hover { color: var(--orchid); }
+
+.excerpt {
+  margin: 0.35rem 0 0;
+  font-size: 0.9375rem;
+}
+
+.site-footer {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 1.25rem 3rem;
+  font-size: 0.875rem;
+  color: var(--berry);
+  opacity: 0.75;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}

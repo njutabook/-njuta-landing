@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/blog.css' | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <!-- Plausible (cookieless analytics, matches the marketing site) -->
+  <script defer data-domain="njutabook.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="https://njutabook.com">njuta</a>
+    <nav>
+      <a href="{{ '/blog/' | relative_url }}">journal</a>
+    </nav>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>njuta — a photo book of your season, found for you. <a href="https://njutabook.com">njutabook.com</a></p>
+  </footer>
+</body>
+</html>

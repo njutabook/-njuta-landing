@@ -1,0 +1,40 @@
+# njuta blog — Jekyll config
+# Existing static site files pass through untouched (anything without front matter
+# is copied verbatim), so this can live in the same repo as the marketing site.
+
+title: njuta journal
+description: Notes on savoring the little things — photo books, memory, and the seasons in between.
+url: "https://njutabook.com"
+baseurl: ""
+lang: en
+
+permalink: /blog/:title/
+
+plugins:
+  - jekyll-sitemap      # generates /sitemap.xml automatically
+  - jekyll-seo-tag      # title/description/OG/Twitter/JSON-LD meta
+  - jekyll-feed         # generates /feed.xml (RSS)
+
+feed:
+  path: feed.xml
+
+# Author shown in JSON-LD structured data
+author:
+  name: njuta
+
+twitter:
+  card: summary_large_image
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Don't process these into the site output
+exclude:
+  - README-BLOG-SETUP.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

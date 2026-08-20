@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<article class="post">
+  <p class="eyebrow">
+    {% if page.season %}{{ page.season }}{% else %}{{ page.date | date: "%B %Y" }}{% endif %}
+    · from the studio
+  </p>
+  <h1>{{ page.title }}</h1>
+  <p class="post-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time></p>
+
+  {{ content }}
+
+  <aside class="post-cta">
+    <p>njuta finds the 30 photos worth keeping from your season and mails them to you as a printed book. <a href="https://njutabook.com">See how it works →</a></p>
+  </aside>
+</article>
