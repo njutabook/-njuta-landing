@@ -35,6 +35,7 @@ defaults:
 # Don't process these into the site output
 exclude:
   - README-BLOG-SETUP.md
+  - README-DEPLOY.md
   - Gemfile
   - Gemfile.lock
   - vendor
