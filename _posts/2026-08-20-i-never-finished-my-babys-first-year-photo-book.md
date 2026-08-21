@@ -4,11 +4,11 @@ description: "I never finished my baby's first year photo book. Not because I di
 season: "summer 2026"
 ---
 
-I've been sitting on this one for a while, because it's a bit of a real one. But here we go. I never finished my baby's first year photo book.
+I've been sitting on this one for a while, because it's a bit of a real one. But here we go: I never finished my baby's first year photo book.
 
-Not because I didn't want to. Not because I didn't have a hundred half-started drafts sitting in some app. Because I was juggling actually raising that kid, and somewhere underneath the sleep deprivation I was carrying two kinds of guilt at once: the guilt of not making it, and the guilt of having to pick the "best" photos when every single one of them was perfect to me.
+Not because I didn't want to. Not because I didn't have a hundred half-started drafts sitting in some app. But because I was juggling actually raising that kid, and somewhere underneath the sleep deprivation I was carrying two kinds of guilt at once: the guilt of not making it, and the guilt of having to pick the "best" photos when every single one of them was perfect to me.
 
-So it sat there. At the bottom of a growing to-do list, for months. Then more months. Anyone relate?
+So it sat there at the bottom of a growing to-do list, for months. Then more months. Anyone relate?
 
 ## It was never actually about time
 
@@ -20,13 +20,13 @@ So I didn't. I just closed the app and told myself I'd deal with it later.
 
 ## Why this project breaks so many of us
 
-Most things on a to-do list get a little easier to ignore the longer they sit, because the stakes don't really change. This one's the opposite. The longer I put it off, the heavier it got, because I wasn't just picking photos anymore. I was trying to represent an entire irreplaceable year of my kid's life that had already happened. Month two became unreachable the second month three started. There's no redo on that.
+Most things on a to-do list get a little easier to ignore the longer they sit, because the stakes don't really change. This one's the opposite. The longer I put it off, the heavier it got, because I wasn't just picking photos anymore. I was trying to represent an entire irreplaceable year of my kid's life that had already happened. 
 
-That's a strange kind of pressure to put on something that's supposed to be a to-do list item. No wonder it never got crossed off.
+That's a strange kind of pressure to put on something that's supposed to be a "fun" to-do list item; no wonder it never got crossed off?
 
 ## What actually would've helped
 
-Looking back, I don't think I needed a nicer app. Every tool I tried still handed me the same job with a prettier interface: open the camera roll, scroll, decide what stays and what gets left behind. A smoother button doesn't fix an impossible choice. It just makes it look nicer while you avoid it.
+Looking back, I don't think I needed a nicer app. Every tool I tried still handed me the same job with a prettier interface: open the camera roll, scroll, decide what stays and what gets left behind. A smoother button doesn't fix an impossible choice; it just makes it look nicer while you avoid it.
 
 What I actually needed was to not be the one who had to choose at all.
 
@@ -36,7 +36,7 @@ I built the thing I needed and couldn't find. Which, if you're building anything
 
 ## If this is you too
 
-You're not behind, and you're not a bad parent for having thousands of unsorted photos of a kid who's already grown out of the outfit in half of them. The system was never built for how genuinely impossible that decision is. I know because I lived it, and then I built a way around it instead of a better version of the same problem.
+You're not behind, and you're not a bad parent for having thousands of unsorted photos of a kid who's already grown out of the outfit in half of them. The keepsake system was never built for sustaining how massive our camera rolls have become. I know because I lived it, and then I built a way around it instead of a better version of the same problem.
 
 The fix was never "try harder to pick." It was not having to.
 
@@ -44,5 +44,4 @@ That blurry one of her mid-laugh? It's in her summer book now. So is the one wit
 
 Last but not least: making photo books of your kids as they grow up is a nice to have, not a must have. You are doing a pretty darn good job if you're just doing the actual job of being a parent. So if anything, I hope this post reminds you that you're not alone in this problem, and that you'll be okay. 
 
-Cheers,
-Kara (co-founder of njuta, and fellow tired & overwhelmed new parent trying to keep up) 
+-Kara (co-founder of njuta, and fellow tired & overwhelmed new parent trying to keep up) 
