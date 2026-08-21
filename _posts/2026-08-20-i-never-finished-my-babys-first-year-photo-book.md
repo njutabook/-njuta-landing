@@ -41,3 +41,8 @@ You're not behind, and you're not a bad parent for having thousands of unsorted 
 The fix was never "try harder to pick." It was not having to.
 
 That blurry one of her mid-laugh? It's in her summer book now. So is the one with the bad lighting where she's looking right at the camera for the first time. Neither of them had to win against the other nine hundred almost-identical shots. They just both got to stay.
+
+Last but not least: making photo books of your kids as they grow up is a nice to have, not a must have. You are doing a pretty darn good job if you're just doing the actual job of being a parent. So if anything, I hope this post reminds you that you're not alone in this problem, and that you'll be okay. 
+
+Cheers,
+Kara (co-founder of njuta, and fellow tired & overwhelmed new parent trying to keep up) 
