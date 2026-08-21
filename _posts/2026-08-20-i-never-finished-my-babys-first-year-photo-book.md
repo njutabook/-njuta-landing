@@ -26,7 +26,7 @@ That's a strange kind of pressure to put on something that's supposed to be a "f
 
 ## What actually would've helped
 
-Looking back, I don't think I needed a nicer app to help me build the photo book. Every tool I tried still handed me the same job with a prettier interface: open the camera roll, scroll, decide what stays and what gets left behind. Photo books technology has gotten better automation and tools for the layout of the photo book, but a smoother UI doesn't fix the typically impossible choice: which of the near-identical two photos of your kid do you print and not print?
+Looking back, I don't think I needed a nicer app to help me build the photo book. Every tool I tried still handed me the same job with a prettier interface: open the camera roll, scroll, decide what stays and what gets left behind. Photobook technology has gotten better automation and tools for the layout of the photo book, but a smoother UI doesn't fix the typically impossible choice: which of the near-identical two photos of your kid do you print and not print?
 
 What I actually needed was to not be the one who had to choose at all.
 
