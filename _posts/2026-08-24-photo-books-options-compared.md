@@ -51,7 +51,7 @@ The main hook is that it takes the typically most tedious part out of the equati
  
 **Not great for** one off books or custom templates/covers. njuta is currently only available on a seasonal membership basis, with the point of it being a seasonal habit where you can enjoy and appreciate your year as it's happening, not after it's happened. Cover and photo page templates are fixed because we believe we've made the best design choices we can, and want to build an experience where you have minimal work/decision making involved. But if you're someone who cares to be involved in those details, this may not be the option for you.
  
-## So, Which Photo Book Service Is Right for You?
+## So, Which Photo Book Service Is Best for You?
  
 The good news about this space is that there are a lot of great options, each with real strengths. Hopefully this breakdown saves you some time deciding, and good luck on your pursuit of preserving your memories. Future you will thank you.
  
