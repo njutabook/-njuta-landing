@@ -9,66 +9,44 @@
 
 
 
-#book-section{view-timeline:--bk block}
-#bk-spring,#bk-summer,#bk-autumn,#bk-winter,#bk-spread,#bk-cap-a,#bk-cap-b{animation-timeline:--bk;animation-range:contain 0% contain 100%}
-#bk-spring{animation-name:bkSpring;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-summer{animation-name:bkSummer;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-autumn{animation-name:bkAutumn;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-winter{animation-name:bkWinter;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-spread{animation-name:bkSpread;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-cap-a{animation-name:bkCapA;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-#bk-cap-b{animation-name:bkCapB;animation-timing-function:linear;animation-fill-mode:both;animation-duration:1s}
-@keyframes bkSpring{0%{transform:translateX(-336px) rotate(0deg)}60%,100%{transform:translateX(-47vw) rotate(-7deg)}}
-@keyframes bkSummer{0%,25%{transform:translateX(-112px) scale(1);opacity:1}60%,100%{transform:translateX(0px) scale(1.25);opacity:0}}
-@keyframes bkAutumn{0%{transform:translateX(112px) rotate(0deg)}60%,100%{transform:translateX(44vw) rotate(6deg)}}
-@keyframes bkWinter{0%{transform:translateX(336px) rotate(0deg)}60%,100%{transform:translateX(51vw) rotate(9deg)}}
-@keyframes bkSpread{0%,35%{opacity:0;transform:translate(-50%,-50%) scale(0.62)}78%,100%{opacity:1;transform:translate(-50%,-50%) scale(1)}}
-@keyframes bkCapA{0%,42%{opacity:1}54%,100%{opacity:0}}
-@keyframes bkCapB{0%,42%{opacity:0}54%,100%{opacity:1}}
-#bk-pill-1,#bk-pill-2,#bk-pill-3{animation-timeline:--bk,auto;animation-range:contain 0% contain 100%;animation-timing-function:linear,linear;animation-fill-mode:both,none;animation-duration:1s,6s;animation-iteration-count:1,infinite}
-#bk-pill-1{animation-name:bkPill1,pillSpin}
-#bk-pill-2{animation-name:bkPill2,pillSpin}
-#bk-pill-3{animation-name:bkPill3,pillSpin}
-@keyframes bkPill1{0%,48%{opacity:0;transform:translateY(14px)}62%,100%{opacity:1;transform:translateY(0)}}
-@keyframes bkPill2{0%,54%{opacity:0;transform:translateY(14px)}68%,100%{opacity:1;transform:translateY(0)}}
-@keyframes bkPill3{0%,60%{opacity:0;transform:translateY(14px)}74%,100%{opacity:1;transform:translateY(0)}}
-@property --pillAngle{syntax:'<angle>';initial-value:0deg;inherits:false}
-@keyframes pillSpin{to{--pillAngle:360deg}}
-@keyframes wkScr1{0%,12.5%{opacity:1}14.5%,98%{opacity:0}100%{opacity:1}}
-@keyframes wkScr2{0%,12.5%{opacity:0}14.5%,39%{opacity:1}41%,100%{opacity:0}}
-@keyframes wkScr3{0%,39%{opacity:0}41%,56%{opacity:1}58%,100%{opacity:0}}
-@keyframes wkScr4{0%,56%{opacity:0}58%,78%{opacity:1}80%,100%{opacity:0}}
-@keyframes wkScr5{0%,78%{opacity:0}80%,96.5%{opacity:1}98.5%,100%{opacity:0}}
-@keyframes wkTap1{0%,9.5%{opacity:0;transform:scale(0.4)}10.5%{opacity:1;transform:scale(1)}12.3%,100%{opacity:0;transform:scale(1.2)}}
-@keyframes wkTap3{0%,52.5%{opacity:0;transform:scale(0.4)}53.5%{opacity:1;transform:scale(1)}55.3%,100%{opacity:0;transform:scale(1.2)}}
-@keyframes wkTap4{0%,74.5%{opacity:0;transform:scale(0.4)}75.5%{opacity:1;transform:scale(1)}77.3%,100%{opacity:0;transform:scale(1.2)}}
-@keyframes wkProg{0%,15%{width:5%}38%,100%{width:93%}}
-@keyframes wkC1{0%,17%{opacity:0.15}17.8%,100%{opacity:1}}
-@keyframes wkC2{0%,20.5%{opacity:0.15}21.3%,100%{opacity:1}}
-@keyframes wkC3{0%,24%{opacity:0.15}24.8%,100%{opacity:1}}
-@keyframes wkC4{0%,27.5%{opacity:0.15}28.3%,100%{opacity:1}}
-@keyframes wkC5{0%,31%{opacity:0.15}31.8%,100%{opacity:1}}
-@keyframes wkC6{0%,35%{opacity:0.15}35.8%,100%{opacity:1}}
-@keyframes wkF1{0%,59%{max-width:0px}60%{max-width:44px}61.5%,100%{max-width:150px}}
-@keyframes wkF2{0%,62.5%{max-width:0px}63.5%{max-width:56px}65.5%,100%{max-width:170px}}
-@keyframes wkF3{0%,66.5%{max-width:0px}67.5%{max-width:50px}69%,100%{max-width:140px}}
-@keyframes wkF4{0%,70.5%{max-width:0px}71.8%,100%{max-width:60px}}
-@keyframes bookspin{from{transform:rotateY(0deg)}to{transform:rotateY(360deg)}}
-@keyframes wkHi1{0%,17%,20.5%,100%{background:rgba(235,135,200,0)}17.8%,19.7%{background:rgba(235,135,200,0.16)}}
-@keyframes wkHi2{0%,20.5%,24%,100%{background:rgba(235,135,200,0)}21.3%,23.2%{background:rgba(235,135,200,0.16)}}
-@keyframes wkHi3{0%,24%,27.5%,100%{background:rgba(235,135,200,0)}24.8%,26.7%{background:rgba(235,135,200,0.16)}}
-@keyframes wkHi4{0%,27.5%,31%,100%{background:rgba(235,135,200,0)}28.3%,30.2%{background:rgba(235,135,200,0.16)}}
-@keyframes wkHi5{0%,31%,35%,100%{background:rgba(235,135,200,0)}31.8%,34.1%{background:rgba(235,135,200,0.16)}}
-@keyframes wkHi6{0%,35%,100%{background:rgba(235,135,200,0)}35.8%,38%{background:rgba(235,135,200,0.16)}}
-.bk-pill{border:2.5px solid transparent;background:linear-gradient(150deg,rgba(255,255,255,0.96),rgba(253,246,240,0.88)) padding-box,conic-gradient(from var(--pillAngle),#EB87C8,#B58CE8,#F9D2EC,#8A6FAE,#EB87C8) border-box;backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);box-shadow:0 14px 32px rgba(150,90,88,0.14),inset 0 1px 0 rgba(255,255,255,0.85)}
+@keyframes njspin{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes aProg{0%,8%{width:8%}92%,100%{width:65%}}
+@keyframes aCheck{to{opacity:1}}
+@keyframes dotOut{to{opacity:0}}
+@keyframes aScroll{0%{transform:translateY(0)}100%{transform:translateY(-230px)}}
+@keyframes tapGlow{0%{opacity:0;transform:scale(0.4)}35%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.2)}}
+@keyframes cardIn{from{opacity:0;transform:scale(0.93) translateY(10px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes slideInR{from{opacity:0;transform:translateX(110px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideOutL{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(-110px)}}
 html,body{margin:0;padding:0}
 body{background:linear-gradient(170deg,#FDF9F1 0%,#FBEFE7 55%,#F8E5E1 100%);background-attachment:fixed}
 a{color:#8A6FAE;text-decoration:underline;text-underline-offset:3px}
 a:hover{color:#3A1F5A}
+@media (max-width:768px){
+.m-h1{font-size:44px !important}
+.m-big{font-size:21px !important}
+.m-cta{font-size:27px !important}
+.m-sec{padding-top:90px !important}
+.m-steps{grid-template-columns:1fr !important;gap:34px !important}
+.m-covers{flex-wrap:wrap !important;row-gap:14px !important}
+.m-cover{width:35vw !important}
+.m-pill{font-size:14px !important;padding:0 24px !important;height:52px !important}
+#car-row{display:grid !important;grid-template-columns:1fr 1fr;gap:18px !important;justify-items:center}
+#car-unit{grid-column:1/3;grid-row:1}
+#car-prev{grid-row:2;justify-self:end}
+#car-next{grid-row:2;justify-self:start}
+}
+@media (max-width:420px){
+.m-phone{width:296px !important;height:621px !important}
+.m-scale{transform:scale(0.7074) !important}
+}
 </style>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.184.0/build/three.module.js","three/addons/loaders/GLTFLoader.js":"https://unpkg.com/three@0.184.0/examples/jsm/loaders/GLTFLoader.js","three/addons/environments/RoomEnvironment.js":"https://unpkg.com/three@0.184.0/examples/jsm/environments/RoomEnvironment.js"}}</script>
+<script type="module" src="assets/glb-spin.js"></script>
 <meta name="description" content="njuta finds the 30 moments that made your season yours — and mails you the printed book. $39 per season, cancel anytime. Photos never leave your phone except your final 30.">
 <meta property="og:title" content="njuta — a book for every season">
-<meta property="og:description" content="Less scrolling, more enjoying. Once a season, njuta finds your 30 moments and mails you the book.">
+<meta property="og:description" content="Once a season, njuta finds your 30 moments and mails you the printed book.">
 <meta property="og:url" content="https://njutabook.com/">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://njutabook.com/">
@@ -86,183 +64,224 @@ a:hover{color:#3A1F5A}
   <!-- hero -->
   <div style="max-width:760px;margin:0 auto;padding:56px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
     <span style="font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#8A6FAE">coming soon to the app store</span>
-    <h1  style="margin:22px 0 0;;text-wrap:balance"><img src="assets/jitzu/01-less-scrolling-more-enjo.svg" alt="less scrolling, more enjoying." style="display:block;width:453.4px;max-width:100%;height:auto"></h1>
-    <p style="margin:20px 0 0;font:400 18px/1.6 Roboto,sans-serif;color:#4B3070;max-width:470px;text-wrap:pretty">once a season, njuta finds the 30 moments that made it yours &mdash; and mails you the book.</p>
-    <span style="margin-top:28px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;height:58px;padding:0 42px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.85),rgba(255,255,255,0.5));border:1px solid rgba(255,255,255,0.95);box-shadow:0 18px 40px rgba(150,90,88,0.18),inset 0 1px 0 rgba(255,255,255,0.95);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);font:700 16.5px/1 Roboto,sans-serif;color:#3A1F5A">coming soon to the app store</span>
-    <span style="margin-top:14px;font:300 12.5px/1.5 Roboto,sans-serif;color:#8A7396">$39 per season &middot; cancel anytime &middot; no photos leave your phone, except for the final 30 in your season&rsquo;s book</span>
+    <h1 class="m-h1"  style="margin:22px 0 0;;text-wrap:balance"><img src="assets/jitzu/01-honor-your-lived-life.svg" alt="honor your lived life" style="display:block;width:344.8px;max-width:100%;height:auto"></h1>
+    <p style="margin:20px 0 0;font:400 18px/1.6 Roboto,sans-serif;color:#4B3070;max-width:470px;text-wrap:pretty">njuta is your seasonal book membership that captures &amp; mails you the best of your camera roll for $39/quarter.</p>
+    <span class="m-pill" style="margin-top:28px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;height:58px;padding:0 42px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.85),rgba(255,255,255,0.5));border:1px solid rgba(255,255,255,0.95);box-shadow:0 18px 40px rgba(150,90,88,0.18),inset 0 1px 0 rgba(255,255,255,0.95);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);font:700 16.5px/1 Roboto,sans-serif;color:#3A1F5A;gap:11px"><svg width="17" height="20" viewBox="0 0 24 28" fill="currentColor" aria-hidden="true" style="margin-top:-3px"><path d="M19.85 14.72c-.03-3.12 2.55-4.62 2.66-4.69-1.45-2.12-3.7-2.41-4.5-2.44-1.92-.2-3.74 1.13-4.71 1.13-.97 0-2.47-1.1-4.06-1.07-2.09.03-4.02 1.21-5.1 3.08-2.17 3.77-.55 9.35 1.57 12.41 1.03 1.5 2.27 3.18 3.89 3.12 1.56-.06 2.15-1 4.03-1s2.41 1 4.06.97c1.68-.03 2.74-1.53 3.77-3.03 1.19-1.74 1.68-3.42 1.71-3.5-.04-.02-3.29-1.27-3.32-4.98zM16.74 5.55c.86-1.05 1.45-2.5 1.29-3.95-1.25.05-2.76.83-3.66 1.87-.8.93-1.5 2.41-1.31 3.83 1.39.11 2.82-.71 3.68-1.75z"></path></svg>coming soon to the app store</span>
   </div>
 
-  <!-- 1. animated app walkthrough -->
-  <div style="display:flex;flex-direction:column;align-items:center;padding:48px 28px 0">
-    <div style="position:relative;width:328px;height:711px;border-radius:52px;background:#0D0A12;padding:9px;box-sizing:border-box;box-shadow:0 40px 90px rgba(150,90,88,0.3),0 8px 24px rgba(45,22,66,0.18)">
-      <div style="position:relative;width:100%;height:100%;border-radius:44px;overflow:hidden;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
-        <!-- screen 1: welcome -->
-        <div style="position:absolute;inset:0;animation:wkScr1 26s linear infinite">
-          <div role="img" aria-label="njuta welcome screen" style="position:absolute;inset:44px 0 0 0;background-image:url('assets/walkthrough/01-welcome-clean.png');background-size:cover;background-position:top center"></div>
-          <div style="position:absolute;top:0;left:0;right:0;height:44px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 4px 30px;box-sizing:border-box;font:600 13px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span style="font:500 12px/1 Roboto,sans-serif;color:#8A6FAE">sign in</span></div>
-          <div style="position:absolute;left:50%;top:88%;width:60px;height:60px;margin:-30px 0 0 -30px;border-radius:999px;pointer-events:none;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 30px rgba(235,135,200,0.75);opacity:0;animation:wkTap1 26s linear infinite"></div>
+  <!-- 1. app walkthrough carousel -->
+  <div style="display:flex;flex-direction:column;align-items:center;padding:48px 28px 0;overflow-x:clip;max-width:100%">
+    <div id="car-row" style="display:flex;align-items:center;gap:clamp(14px,4vw,40px)">
+      <button id="car-prev" aria-label="previous screen" style="width:86px;height:54px;flex:none;border-radius:999px;border:1px solid rgba(255,255,255,0.85);background:linear-gradient(150deg,rgba(255,255,255,0.68),rgba(255,255,255,0.34));box-shadow:0 16px 34px rgba(150,90,88,0.15),inset 0 1px 0 rgba(255,255,255,0.92);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;z-index:5"><svg width="30" height="14" viewBox="0 0 30 14" fill="none"><path d="M30 7H3M8 1.5L2.5 7 8 12.5" stroke="#3A1F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+      <div id="car-unit" style="display:flex;flex-direction:column;align-items:center;animation:slideInR 0.5s cubic-bezier(0.22,0.61,0.36,1) both">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:7px;min-height:72px;justify-content:flex-end;padding-bottom:24px;text-align:center">
+          <span id="car-t1"  style="color:#4B2C6B"><img src="assets/jitzu/02-your-moments.svg" alt="your moments" style="display:block;width:203.1px;max-width:100%;height:auto"></span>
+          <span id="car-t2" style="font:300 21px/1.2 Roboto,sans-serif;color:#3A1F5A">found for you</span>
         </div>
-        <!-- screen 2: the sort -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;animation:wkScr2 26s linear infinite;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
-          <div style="height:44px;flex:none;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 4px 30px;box-sizing:border-box;font:600 13px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span style="font:500 12px/1 Roboto,sans-serif;color:#8A6FAE">sign in</span></div>
-          <div style="text-align:center;padding:24px 24px 0">
-            <div ><img src="assets/jitzu/02-reading-your-summer.svg" alt="reading your summer" style="display:block;width:278.2px;max-width:100%;height:auto"></div>
-            <div style="margin-top:10px;font:400 12.5px/1 Roboto,sans-serif;color:#6E5B85">your 30 moments, en route</div>
-            <div style="margin:16px auto 0;width:82%;height:8px;border-radius:999px;background:rgba(255,255,255,0.85);overflow:hidden;box-shadow:inset 0 1px 3px rgba(58,31,90,0.08)"><div style="height:100%;border-radius:999px;background:linear-gradient(90deg,#4B2C6B,#EB87C8);width:5%;animation:wkProg 26s linear infinite"></div></div>
-          </div>
-          <div style="margin:18px 16px 0;background:linear-gradient(150deg,rgba(255,255,255,0.92),rgba(255,255,255,0.62));border:1px solid rgba(255,255,255,0.95);border-radius:22px;padding:12px;box-sizing:border-box;display:flex;flex-direction:column;gap:2px;box-shadow:0 14px 32px rgba(150,90,88,0.1)">
-            <div style="display:flex;align-items:center;gap:10px;background:rgba(235,135,200,0.16);border-radius:12px;padding:10px 12px;font:600 12px/1.3 Roboto,sans-serif;color:#3A1F5A"><span style="color:#EB87C8">&#10022;</span>reading your summer &mdash; 1,204 of 1,847</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi1 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC1 26s linear infinite">&#10003;</span>setting aside the screenshots</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi2 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC2 26s linear infinite">&#10003;</span>skipping the blurry ones</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi3 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC3 26s linear infinite">&#10003;</span>cleaning up duplicates</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi4 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC4 26s linear infinite">&#10003;</span>setting aside documents &amp; text</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi5 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC5 26s linear infinite">&#10003;</span>finding the real moments</div>
-            <div style="display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;font:400 12px/1.3 Roboto,sans-serif;color:#6E5B85;animation:wkHi6 26s linear infinite"><span style="color:#8A6FAE;font-weight:700;opacity:0.15;animation:wkC6 26s linear infinite">&#10003;</span>choosing your 30</div>
-          </div>
-          <div style="margin:16px 16px 0;background:#4B2C6B;border-radius:18px;padding:14px 18px;font:300 11.5px/1.55 Roboto,sans-serif;color:#F4E9F5;text-align:left">this happens on its own &mdash; close the app if you like. we&rsquo;ll nudge you the <span style="font-weight:600">moment your 30 are ready.</span></div>
-        </div>
-        <!-- screen 3: your 30 -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;animation:wkScr3 26s linear infinite;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
-          <div style="height:44px;flex:none;display:flex;align-items:flex-end;justify-content:space-between;padding:0 26px 4px 30px;box-sizing:border-box;font:600 13px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span style="font:500 12px/1 Roboto,sans-serif;color:#8A6FAE">sign in</span></div>
-          <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 20px 0">
-            <span ><img src="assets/jitzu/03-your-30.svg" alt="your 30" style="display:block;width:118.0px;max-width:100%;height:auto"></span>
-            <span style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.9);border-radius:999px;padding:8px 14px;font:600 11.5px/1 Roboto,sans-serif;color:#3A1F5A;box-shadow:0 6px 14px rgba(150,90,88,0.1)">&#10003; 30 kept</span>
-          </div>
-          <div style="padding:10px 20px 0;font:300 10.5px/1.55 Roboto,sans-serif;color:#6E5B85;text-align:left">we read your 1,847 summer photos and kept the 30 that felt like the season. tap any to look closer, swap, or tweak as much as you&rsquo;d like.</div>
-          <div style="flex:1;display:flex;gap:10px;padding:12px 16px 0;overflow:hidden">
-            <div style="flex:1;display:flex;flex-direction:column;gap:10px">
-              <div role="img" aria-label="dad and baby at the museum" style="flex:none;height:185px;border-radius:16px;background-image:url('assets/photos/p1.jpg');background-size:cover;background-position:center;position:relative"><span style="position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font:700 10px/1 Roboto,sans-serif;color:#4B2C6B">&#10003;</span><span style="position:absolute;left:10px;bottom:8px;font:500 9.5px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.5)">jun 3</span></div>
-              <div role="img" aria-label="baby at the window" style="flex:none;height:220px;border-radius:16px;background-image:url('assets/photos/p3.jpg');background-size:cover;background-position:center;position:relative"><span style="position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font:700 10px/1 Roboto,sans-serif;color:#4B2C6B">&#10003;</span><span style="position:absolute;left:10px;bottom:8px;font:500 9.5px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.5)">jun 7</span></div>
-              <div role="img" aria-label="love bug art and flowers" style="flex:none;height:170px;border-radius:16px;background-image:url('assets/photos/p5.jpg');background-size:cover;background-position:center;position:relative"><span style="position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font:700 10px/1 Roboto,sans-serif;color:#4B2C6B">&#10003;</span><span style="position:absolute;left:10px;bottom:8px;font:500 9.5px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.5)">jun 21</span></div>
-            </div>
-            <div style="flex:1;display:flex;flex-direction:column;gap:10px;padding-top:28px">
-              <div role="img" aria-label="washing lemons in the sink" style="flex:none;height:240px;border-radius:16px;background-image:url('assets/photos/p2.jpg');background-size:cover;background-position:center;position:relative"><span style="position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font:700 10px/1 Roboto,sans-serif;color:#4B2C6B">&#10003;</span><span style="position:absolute;left:10px;bottom:8px;font:500 9.5px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.5)">jul 13</span></div>
-              <div role="img" aria-label="sunset at the airport" style="flex:none;height:200px;border-radius:16px;background-image:url('assets/photos/p4.jpg');background-size:cover;background-position:center;position:relative"><span style="position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:999px;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;font:700 10px/1 Roboto,sans-serif;color:#4B2C6B">&#10003;</span><span style="position:absolute;left:10px;bottom:8px;font:500 9.5px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.5)">jul 16</span></div>
-            </div>
-          </div>
-          <div style="position:absolute;left:0;right:0;bottom:0;padding:36px 16px 14px;background:linear-gradient(180deg,rgba(251,239,231,0),rgba(251,239,231,0.96) 48%)">
-            <div style="position:relative;height:50px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.72));border:1px solid rgba(255,255,255,0.95);box-shadow:0 12px 26px rgba(150,90,88,0.16);display:flex;align-items:center;justify-content:center;font:700 14px/1 Roboto,sans-serif;color:#3A1F5A">review &amp; print
-              <div style="position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:999px;pointer-events:none;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 30px rgba(235,135,200,0.75);opacity:0;animation:wkTap3 26s linear infinite"></div>
-            </div>
-            <div style="margin-top:8px;text-align:center;font:300 9.5px/1.4 Roboto,sans-serif;color:#8A7396">edits are accepted until the print-ready deadline.</div>
-          </div>
-        </div>
-        <!-- screen 4: send it home -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;animation:wkScr4 26s linear infinite;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
-          <div style="height:44px;flex:none;display:flex;align-items:flex-end;padding:0 26px 4px 30px;box-sizing:border-box;font:600 13px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span></div>
-          <div  style="text-align:center;padding:36px 24px 0"><img src="assets/jitzu/04-send-it-home.svg" alt="send it home" style="display:block;width:164.3px;max-width:100%;height:auto"></div>
-          <div style="display:flex;flex-direction:column;gap:12px;padding:32px 20px 0">
-            <div style="height:46px;border-radius:16px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.7));border:1px solid rgba(255,255,255,0.95);display:flex;align-items:center;padding:0 18px;box-sizing:border-box;box-shadow:0 8px 18px rgba(150,90,88,0.07)"><span style="display:inline-block;overflow:hidden;white-space:nowrap;max-width:0;font:400 14px/1.3 Roboto,sans-serif;color:#3A1F5A;animation:wkF1 26s linear infinite">Freja Almqvist</span></div>
-            <div style="height:46px;border-radius:16px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.7));border:1px solid rgba(255,255,255,0.95);display:flex;align-items:center;padding:0 18px;box-sizing:border-box;box-shadow:0 8px 18px rgba(150,90,88,0.07)"><span style="display:inline-block;overflow:hidden;white-space:nowrap;max-width:0;font:400 14px/1.3 Roboto,sans-serif;color:#3A1F5A;animation:wkF2 26s linear infinite">123 Memories Lane</span></div>
-            <div style="display:flex;gap:12px">
-              <div style="flex:1.5;height:46px;border-radius:16px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.7));border:1px solid rgba(255,255,255,0.95);display:flex;align-items:center;padding:0 18px;box-sizing:border-box;box-shadow:0 8px 18px rgba(150,90,88,0.07)"><span style="display:inline-block;overflow:hidden;white-space:nowrap;max-width:0;font:400 14px/1.3 Roboto,sans-serif;color:#3A1F5A;animation:wkF3 26s linear infinite">Los Angeles, CA</span></div>
-              <div style="flex:1;height:46px;border-radius:16px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.7));border:1px solid rgba(255,255,255,0.95);display:flex;align-items:center;padding:0 16px;box-sizing:border-box;box-shadow:0 8px 18px rgba(150,90,88,0.07)"><span style="display:inline-block;overflow:hidden;white-space:nowrap;max-width:0;font:400 14px/1.3 Roboto,sans-serif;color:#3A1F5A;animation:wkF4 26s linear infinite">12345</span></div>
-            </div>
-          </div>
-          <div style="flex:1"></div>
-          <div style="padding:0 16px 22px">
-            <div style="position:relative;height:50px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.95),rgba(255,255,255,0.72));border:1px solid rgba(255,255,255,0.95);box-shadow:0 12px 26px rgba(150,90,88,0.16);display:flex;align-items:center;justify-content:center;font:700 14px/1 Roboto,sans-serif;color:#3A1F5A">ship my book
-              <div style="position:absolute;left:50%;top:50%;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:999px;pointer-events:none;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 30px rgba(235,135,200,0.75);opacity:0;animation:wkTap4 26s linear infinite"></div>
-            </div>
-          </div>
-        </div>
-        <!-- screen 5: on the way -->
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;opacity:0;animation:wkScr5 26s linear infinite;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
-          <div style="height:44px;flex:none;display:flex;align-items:flex-end;padding:0 26px 4px 30px;box-sizing:border-box;font:600 13px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span></div>
-          <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px 40px">
-            <div  style="text-align:center"><img src="assets/jitzu/05-get-excited.svg" alt="get excited" style="display:block;width:159.6px;max-width:100%;height:auto"></div>
-            <div style="margin-top:12px;font:400 12.5px/1 Roboto,sans-serif;color:#6E5B85;text-align:center">your first book is on its way!</div>
-            <div style="margin-top:44px;perspective:900px">
-              <div style="position:relative;width:172px;height:229px;transform-style:preserve-3d;animation:bookspin 14s linear infinite">
-                <div style="position:absolute;inset:0;transform:translateZ(13px);background:url('assets/cover-summer-front.png') center/cover;border-radius:4px 10px 10px 4px;backface-visibility:hidden;-webkit-backface-visibility:hidden"></div>
-                <div style="position:absolute;inset:0;transform:rotateY(180deg) translateZ(13px);background:url('assets/cover-summer-back.png') center/cover;border-radius:10px 4px 4px 10px;backface-visibility:hidden;-webkit-backface-visibility:hidden"></div>
-                <div style="position:absolute;width:26px;height:229px;left:calc(50% - 13px);top:0;transform:rotateY(-90deg) translateZ(86px);background:linear-gradient(90deg,#D97EA4,#E591B4 50%,#D67899)"></div>
-                <div style="position:absolute;width:26px;height:229px;left:calc(50% - 13px);top:0;transform:rotateY(90deg) translateZ(73px);background:repeating-linear-gradient(90deg,#FBF6EC 0px,#FBF6EC 2.5px,#E9E0D2 2.5px,#E9E0D2 4px)"></div>
-                <div style="position:absolute;width:172px;height:26px;left:0;top:calc(50% - 13px);transform:rotateX(90deg) translateZ(114px);background:repeating-linear-gradient(180deg,#FBF6EC 0px,#FBF6EC 2.5px,#E9E0D2 2.5px,#E9E0D2 4px)"></div>
-                <div style="position:absolute;width:172px;height:26px;left:0;top:calc(50% - 13px);transform:rotateX(-90deg) translateZ(114px);background:#E0D5C2"></div>
+        <div class="m-phone" style="position:relative;width:328px;height:690px;border-radius:52px;background:#0D0A12;padding:9px;box-sizing:border-box;box-shadow:0 40px 90px rgba(150,90,88,0.3),0 8px 24px rgba(45,22,66,0.18)">
+          <div style="position:relative;width:100%;height:100%;border-radius:44px;overflow:hidden;background:linear-gradient(170deg,#FDF9F1,#FBEFE7)">
+          <div class="car-scr" data-scr="0">
+          <div style="position:absolute;inset:0;overflow:hidden"><div class="m-scale" style="width:393px;height:852px;transform:scale(0.789);transform-origin:top left;position:relative;background:linear-gradient(170deg,#FDF9F1 0%,#FBEFE7 55%,#F8E5E1 100%)"><div style="position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 30px 0;font:700 15px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span style="font-weight:500">sign in</span></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:64px">
+              <div  style="margin-top:36px;text-align:center"><img src="assets/jitzu/03-reading-your-summer.svg" alt="reading your summer" style="display:block;width:409.4px;max-width:100%;height:auto"></div>
+              <div style="margin-top:12px;text-align:center;font:400 14.5px/1 Roboto,sans-serif;color:#6E5B85">your 30 moments, en route</div>
+              <div style="margin:20px 60px 0;height:10px;border-radius:999px;background:rgba(255,255,255,0.55);border:1px solid rgba(255,255,255,0.8);box-shadow:inset 0 1px 3px rgba(58,31,90,0.08);overflow:hidden"><div style="height:100%;border-radius:999px;background:linear-gradient(90deg,#3A1F5A,#8A63C9 70%,#EB87C8);width:8%;animation:aProg 7s linear both"></div></div>
+              <div style="margin:24px 26px 0;border-radius:28px;background:linear-gradient(150deg,rgba(255,255,255,0.62),rgba(255,255,255,0.30));border:1px solid rgba(255,255,255,0.75);box-shadow:0 18px 40px rgba(150,90,88,0.12),inset 0 1px 0 rgba(255,255,255,0.85);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);padding:12px 18px">
+                <div style="position:relative;border-radius:16px;overflow:hidden;margin:4px -8px">
+                  <div style="position:absolute;left:50%;top:50%;width:260%;aspect-ratio:1/1;background:conic-gradient(#EB87C8,#B58CE8,#F9D2EC,#EB87C8);filter:blur(22px);opacity:0.5;animation:njspin 7s linear infinite"></div>
+                  <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,251,252,0.72),rgba(255,240,248,0.42))"></div>
+                  <div style="position:relative;display:flex;align-items:center;gap:12px;padding:12px 12px"><svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z" fill="#EB87C8"></path></svg><span style="font:500 14.5px/1.35 Roboto,sans-serif;color:#3A1F5A">reading your summer &mdash; 1,204 of 1,847</span></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 1s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 1s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">setting aside the screenshots</span></div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 1.9s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 1.9s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">skipping the blurry ones</span></div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 2.8s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 2.8s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">cleaning up duplicates</span></div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 3.7s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 3.7s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">setting aside documents &amp; text</span></div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 4.6s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 4.6s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">finding the real moments</span></div>
+                <div style="display:flex;align-items:center;gap:12px;padding:10px 4px"><div style="position:relative;width:16px;height:16px;flex:none;display:flex;align-items:center;justify-content:center"><div style="width:6px;height:6px;border-radius:999px;background:#D8CDE0;animation:dotOut 0.3s linear 5.5s both"></div><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;animation:aCheck 0.4s linear 5.5s both"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#B0A3BC" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg></span></div><span style="font:400 14px/1.35 Roboto,sans-serif;color:#8A7396">choosing your 30</span></div>
               </div>
-            </div>
-            <div style="width:158px;height:22px;border-radius:50%;background:radial-gradient(ellipse,rgba(130,55,85,0.26),rgba(130,55,85,0) 68%);filter:blur(5px);margin-top:20px"></div>
+              <div style="margin:18px 26px 0;border-radius:24px;background:linear-gradient(160deg,#46266B,#33194F);box-shadow:0 18px 40px rgba(58,31,90,0.28),inset 0 1px 0 rgba(255,255,255,0.16);padding:18px 22px;display:flex;gap:14px;align-items:center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 4a6 6 0 00-6 6v3.5L4.5 17h15L18 13.5V10a6 6 0 00-6-6z" stroke="#EB87C8" stroke-width="1.6" stroke-linejoin="round"></path><path d="M10 20a2 2 0 004 0" stroke="#EB87C8" stroke-width="1.6" stroke-linecap="round"></path></svg><span style="font:400 14px/1.5 Roboto,sans-serif;color:rgba(255,255,255,0.92)">this happens on its own &mdash; close the app if you like. we&rsquo;ll nudge you the <span style="font-weight:700">moment your 30 are ready.</span></span></div>
+              <div style="flex:1"></div>
+            </div><div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:132px;height:5px;border-radius:3px;background:rgba(58,31,90,0.16);z-index:30"></div></div></div>
           </div>
+          <div class="car-scr" data-scr="1" style="display:none">
+          <div style="position:absolute;inset:0;overflow:hidden"><div class="m-scale" style="width:393px;height:852px;transform:scale(0.789);transform-origin:top left;position:relative;background:linear-gradient(170deg,#FDF9F1 0%,#FBEFE7 55%,#F8E5E1 100%)"><div style="position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 30px 0;font:700 15px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span style="font-weight:500">sign in</span></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:64px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;margin:24px 28px 0">
+                <div ><img src="assets/jitzu/04-your-30.svg" alt="your 30" style="display:block;width:144.0px;max-width:100%;height:auto"></div>
+                <div style="display:flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.65),rgba(255,255,255,0.35));border:1px solid rgba(255,255,255,0.8);box-shadow:0 8px 18px rgba(150,90,88,0.10)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:600 13px/1 Roboto,sans-serif;color:#3A1F5A">30 kept</span></div>
+              </div>
+              <div style="margin:12px 28px 0;font:300 13.5px/1.55 Roboto,sans-serif;color:#6E5B85">we read your 1,847 summer photos and kept the 30 that felt like the season. tap any to look closer at each shot. swap out or tweak this selection as much as you&rsquo;d like.</div>
+              <div style="position:relative;flex:1;overflow:hidden;margin-top:18px">
+                <div style="display:flex;gap:12px;padding:0 28px;animation:aScroll 5.5s cubic-bezier(0.45,0,0.25,1) 1.6s both">
+                  <div style="flex:1">
+                    <div role="img" aria-label="two people on the beach at dusk" style="position:relative;width:100%;height:225px;border-radius:16px;background:url('assets/photos/n-beach-two.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jun 3</div></div>
+                    <div role="img" aria-label="dad and toddler in the park" style="position:relative;width:100%;height:260px;border-radius:16px;background:url('assets/photos/n-park.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jun 21</div></div>
+                    <div role="img" aria-label="beach sunset" style="position:relative;width:100%;height:195px;border-radius:16px;background:url('assets/photos/n-beach-sunset.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jul 2</div></div>
+                    <div role="img" aria-label="carrying the car seats home" style="position:relative;width:100%;height:245px;border-radius:16px;background:url('assets/photos/n-stroller.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jul 28</div></div>
+                  </div>
+                  <div style="flex:1;padding-top:34px">
+                    <div role="img" aria-label="toddler climbing at the window" style="position:relative;width:100%;height:270px;border-radius:16px;background:url('assets/photos/n-climber.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jun 14</div></div>
+                    <div role="img" aria-label="pizza dinner with friends" style="position:relative;width:100%;height:235px;border-radius:16px;background:url('assets/photos/n-pizza.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jul 16</div></div>
+                    <div role="img" aria-label="waterfall hike" style="position:relative;width:100%;height:230px;border-radius:16px;background:url('assets/photos/n-yosemite.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">aug 2</div></div>
+                    <div role="img" aria-label="sunday bagels" style="position:relative;width:100%;height:210px;border-radius:16px;background:url('assets/photos/n-bagels.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);margin-bottom:12px"><div style="position:absolute;top:6px;right:6px;width:18px;height:18px;border-radius:999px;background:rgba(255,255,255,0.85);box-shadow:0 2px 6px rgba(58,31,90,0.18);display:flex;align-items:center;justify-content:center"><svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#3A1F5A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path></svg></div><div style="position:absolute;left:9px;bottom:8px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">aug 9</div></div>
+                  </div>
+                </div>
+                <div style="position:absolute;left:0;right:0;bottom:0;height:150px;background:linear-gradient(180deg,rgba(250,238,232,0) 0%,#F9E7E2 88%);pointer-events:none"></div>
+              </div>
+              <div style="padding:10px 26px 40px;display:flex;flex-direction:column;gap:10px">
+                <div style="position:relative"><div style="position:absolute;inset:-9px;border-radius:999px;overflow:hidden;filter:blur(13px);opacity:0;animation:aCheck 0.6s ease 6.3s both"><div style="position:absolute;left:50%;top:50%;width:220%;aspect-ratio:1/1;background:conic-gradient(#EB87C8,#B58CE8,#F9D2EC,#EB87C8);animation:njspin 7s linear infinite"></div></div><div style="position:relative;height:56px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.68),rgba(255,255,255,0.34));border:1px solid rgba(255,255,255,0.85);box-shadow:0 16px 34px rgba(150,90,88,0.15),inset 0 1px 0 rgba(255,255,255,0.92);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);display:flex;align-items:center;justify-content:center;font:700 17px/1 Roboto,sans-serif;color:#3A1F5A">review &amp; print<div style="position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:999px;pointer-events:none;z-index:5;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 34px rgba(235,135,200,0.75);opacity:0;animation:tapGlow 1.1s ease 6.4s both"></div></div></div>
+                <div style="text-align:center;font:300 12px/1.4 Roboto,sans-serif;color:#8A7396">edits are accepted until the print ready deadline. if no edits are made before then, the book will print as is.</div>
+              </div>
+            </div><div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:132px;height:5px;border-radius:3px;background:rgba(58,31,90,0.16);z-index:30"></div></div></div>
+          </div>
+          <div class="car-scr" data-scr="2" style="display:none">
+          <div style="position:absolute;inset:0;overflow:hidden"><div class="m-scale" style="width:393px;height:852px;transform:scale(0.789);transform-origin:top left;position:relative;background:linear-gradient(180deg,#4B2A6E 0%,#6C4B88 26%,#8E74A4 50%,#B29CC4 74%,#CDBAD8 100%)"><div style="position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 30px 0;font:700 15px/1 Roboto,sans-serif;color:#FFFFFF"><span>9:41</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"></path></svg></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:64px">
+              <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;position:relative">
+                <div style="display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.14)"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M4.5 12.5l5 5 10-11" stroke="#EB87C8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:500 12.5px/1 Roboto,sans-serif;color:rgba(255,255,255,0.9)">in your book &middot; jul 6</span></div>
+                <span style="position:absolute;right:30px;font:400 12.5px/1 Roboto,sans-serif;color:rgba(255,255,255,0.5)">8 of 30</span>
+              </div>
+              <div role="img" aria-label="a quiet morning at the cafe" style="margin:26px 24px 0;height:452px;border-radius:18px;background:url('assets/photos/n-cafe.jpg') center/cover;box-shadow:0 26px 60px rgba(45,22,66,0.35);animation:cardIn 0.8s cubic-bezier(0.22,0.61,0.36,1) 0.3s both"></div>
+              <div style="display:flex;justify-content:center;gap:5px;margin-top:22px">
+                <div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div><div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div><div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div><div style="width:16px;height:5px;border-radius:999px;background:#EB87C8"></div><div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div><div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div><div style="width:5px;height:5px;border-radius:999px;background:rgba(255,255,255,0.45)"></div>
+              </div>
+              <div style="flex:1"></div>
+              <div style="display:flex;flex-direction:column;gap:12px;margin:0 26px 44px">
+                <div style="position:relative;height:64px;border-radius:999px;overflow:hidden;border:1.5px solid rgba(255,255,255,0.95);box-sizing:border-box;box-shadow:0 16px 34px rgba(45,22,66,0.22),inset 0 1px 0 rgba(255,255,255,0.9);animation:fadeUp 0.6s ease 1s both">
+                  <div style="position:absolute;inset:0;background:#FFFFFF"></div>
+                  <div style="position:absolute;left:50%;top:50%;width:300%;aspect-ratio:1/1;background:conic-gradient(#EB87C8,#B58CE8,#F9D2EC,#EB87C8);filter:blur(24px);opacity:0.5;animation:njspin 7s linear infinite"></div>
+                  <div style="position:absolute;inset:0;background:linear-gradient(150deg,rgba(255,252,253,0.72),rgba(255,242,249,0.46))"></div>
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" style="position:absolute;top:6px;right:12px"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z" fill="#EB87C8"></path><path d="M18.5 14l0.9 2.6L22 17.5l-2.6 0.9L18.5 21l-0.9-2.6L15 17.5l2.6-0.9z" fill="#B58CE8"></path></svg>
+                  <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px">
+                    <div style="position:relative"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="position:absolute;left:-27px;top:50%;transform:translateY(-50%)"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z" fill="#EB87C8"></path></svg><span ><img src="assets/jitzu/05-swap-this-moment.svg" alt="swap this moment" style="display:block;width:162.6px;max-width:100%;height:auto"></span></div>
+                    <span style="font:400 11.5px/1 Roboto,sans-serif;color:#8A63A8">the next-best moment slides in</span>
+                  </div>
+                  <div style="position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:999px;pointer-events:none;z-index:5;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 34px rgba(235,135,200,0.75);opacity:0;animation:tapGlow 1.1s ease 4.2s both"></div>
+                </div>
+                <div style="position:relative;height:64px;border-radius:999px;box-sizing:border-box;background:rgba(255,255,255,0.12);border:1.5px solid rgba(255,255,255,0.65);box-shadow:inset 0 1px 0 rgba(255,255,255,0.3);animation:fadeUp 0.6s ease 1.2s both">
+                  <div style="position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px">
+                    <div style="position:relative"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="position:absolute;left:-27px;top:50%;transform:translateY(-50%)"><path d="M8 13V5.5a1.5 1.5 0 013 0V11m0 0V7.5a1.5 1.5 0 013 0V11m0 0V9a1.5 1.5 0 013 0v5c0 3.5-2.5 6-6 6s-5.6-1.8-6.6-4.6L3.3 12.9a1.5 1.5 0 012.5-1.4L8 13z" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg><span style="font:700 16.5px/1 Roboto,sans-serif;color:#FFFFFF">i&rsquo;ll pick</span></div>
+                    <span style="font:400 11.5px/1 Roboto,sans-serif;color:rgba(255,255,255,0.9)">browse your summer, your call</span>
+                  </div>
+                </div>
+              </div>
+            </div><div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:132px;height:5px;border-radius:3px;background:rgba(58,31,90,0.16);z-index:30"></div></div></div>
+          </div>
+          <div class="car-scr" data-scr="3" style="display:none">
+          <div style="position:absolute;inset:0;overflow:hidden"><div class="m-scale" style="width:393px;height:852px;transform:scale(0.789);transform-origin:top left;position:relative;background:linear-gradient(170deg,#FDF9F1 0%,#FBEFE7 55%,#F8E5E1 100%)"><div style="position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 30px 0;font:700 15px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="#3A1F5A" stroke-width="1.8" stroke-linecap="round"></path></svg></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:64px">
+              <div  style="margin:22px 28px 0"><img src="assets/jitzu/06-choose-what-takes-its-pl.svg" alt="choose what takes its place" style="display:block;width:410.0px;max-width:100%;height:auto"></div>
+              <div style="margin:16px 26px 0;display:flex;align-items:center;gap:14px;border-radius:22px;background:linear-gradient(150deg,rgba(255,255,255,0.62),rgba(255,255,255,0.30));border:1px solid rgba(255,255,255,0.75);box-shadow:0 12px 28px rgba(150,90,88,0.10),inset 0 1px 0 rgba(255,255,255,0.85);padding:14px 16px;animation:fadeUp 0.6s ease 0.2s both">
+                <div style="flex:none;width:58px;height:58px;border-radius:12px;background:url('assets/photos/n-cafe.jpg') center/cover"></div>
+                <div style="display:flex;flex-direction:column;gap:3px"><span style="font:600 14.5px/1.3 Roboto,sans-serif;color:#3A1F5A">leaving your book</span><span style="font:300 12.5px/1.4 Roboto,sans-serif;color:#8A7396">page 8 &middot; jul 6</span></div>
+              </div>
+              <div style="margin:20px 28px 0;font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.16em;text-transform:uppercase;color:#B58CE8">ranked for you &mdash; keep scrolling</div>
+              <div style="position:relative;flex:1;overflow:hidden;margin-top:12px">
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:11px;padding:6px 26px 0">
+                  <div role="img" aria-label="waterfall hike" style="position:relative;aspect-ratio:4/4.6;border-radius:16px;background:url('assets/photos/n-yosemite.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);animation:fadeUp 0.6s ease 0.45s both"><div style="position:absolute;inset:0;border-radius:16px;border:2.5px solid #EB87C8;box-shadow:0 0 0 5px rgba(235,135,200,0.22)"></div><div style="position:absolute;top:10px;left:10px;padding:6px 11px;border-radius:999px;background:#EB87C8;box-shadow:0 4px 12px rgba(235,135,200,0.5);font:600 10.5px/1 Roboto,sans-serif;color:#FFFFFF">njuta&rsquo;s next pick</div><div style="position:absolute;left:10px;bottom:9px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jul 8</div></div>
+                  <div role="img" aria-label="sunday bagels" style="position:relative;aspect-ratio:4/4.6;border-radius:16px;background:url('assets/photos/n-bagels.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);animation:fadeUp 0.6s ease 0.6s both"><div style="position:absolute;left:10px;bottom:9px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jun 30</div></div>
+                  <div role="img" aria-label="carrying the car seats home" style="position:relative;aspect-ratio:4/4.6;border-radius:16px;background:url('assets/photos/n-stroller.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);animation:fadeUp 0.6s ease 0.75s both"><div style="position:absolute;top:10px;left:10px;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,0.85);font:500 10.5px/1 Roboto,sans-serif;color:#3A1F5A">sent to you</div><div style="position:absolute;left:10px;bottom:9px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">jul 8</div></div>
+                  <div role="img" aria-label="afternoon at the archway" style="position:relative;aspect-ratio:4/4.6;border-radius:16px;background:url('assets/photos/n-archway.jpg') center/cover;box-shadow:inset 0 1px 0 rgba(255,255,255,0.45);animation:fadeUp 0.6s ease 0.9s both"><div style="position:absolute;left:10px;bottom:9px;font:500 10px/1 Roboto,sans-serif;color:#FFF;text-shadow:0 1px 6px rgba(0,0,0,0.55)">aug 2</div></div>
+                </div>
+                <div style="position:absolute;left:0;right:0;bottom:0;height:130px;background:linear-gradient(180deg,rgba(250,238,232,0) 0%,#F9E7E2 88%);pointer-events:none"></div>
+              </div>
+              <div style="padding:10px 26px 40px">
+                <div style="position:relative"><div style="position:absolute;inset:-9px;border-radius:999px;overflow:hidden;filter:blur(13px)"><div style="position:absolute;left:50%;top:50%;width:220%;aspect-ratio:1/1;background:conic-gradient(#EB87C8,#B58CE8,#F9D2EC,#EB87C8);animation:njspin 7s linear infinite"></div></div><div style="position:relative;height:56px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.68),rgba(255,255,255,0.34));border:1px solid rgba(255,255,255,0.85);box-shadow:0 16px 34px rgba(150,90,88,0.15),inset 0 1px 0 rgba(255,255,255,0.92);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);display:flex;align-items:center;justify-content:center;font:700 17px/1 Roboto,sans-serif;color:#3A1F5A">swap it in<div style="position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:999px;pointer-events:none;z-index:5;background:radial-gradient(circle,rgba(249,210,236,0.95) 0%,rgba(235,135,200,0.5) 45%,rgba(181,140,232,0) 72%);box-shadow:0 0 34px rgba(235,135,200,0.75);opacity:0;animation:tapGlow 1.1s ease 4.6s both"></div></div></div>
+              </div>
+            </div><div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:132px;height:5px;border-radius:3px;background:rgba(58,31,90,0.16);z-index:30"></div></div></div>
+          </div>
+          <div class="car-scr" data-scr="4" style="display:none">
+          <div style="position:absolute;inset:0;overflow:hidden"><div class="m-scale" style="width:393px;height:852px;transform:scale(0.789);transform-origin:top left;position:relative;background:linear-gradient(170deg,#FDF9F1 0%,#FBEFE7 55%,#F8E5E1 100%)"><div style="position:relative;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:20px 30px 0;font:700 15px/1 Roboto,sans-serif;color:#3A1F5A"><span>9:41</span><span></span></div>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;padding-top:64px">
+              <div  style="margin-top:36px;text-align:center"><img src="assets/jitzu/07-get-excited.svg" alt="get excited" style="display:block;width:212.8px;max-width:100%;height:auto"></div>
+              <div style="margin-top:18px;text-align:center;font:400 16px/1 Roboto,sans-serif;color:#6E5B85">your first book is on its way!</div>
+              <div style="display:flex;flex-direction:column;align-items:center;margin-top:40px">
+                <glb-spin src="assets/summer-book.glb" style="width:310px;height:400px;display:flex"></glb-spin>
+                <div style="width:210px;height:30px;border-radius:50%;background:radial-gradient(ellipse,rgba(130,55,85,0.26),rgba(130,55,85,0) 68%);filter:blur(5px);margin-top:2px"></div>
+              </div>
+              <div style="flex:1"></div>
+            </div><div style="position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:132px;height:5px;border-radius:3px;background:rgba(58,31,90,0.16);z-index:30"></div></div></div>
+          </div>
+          </div>
+          <div style="position:absolute;top:9px;left:50%;transform:translateX(-50%);width:110px;height:28px;border-radius:0 0 18px 18px;background:#0D0A12;z-index:40"></div>
         </div>
       </div>
-      <div style="position:absolute;top:9px;left:50%;transform:translateX(-50%);width:110px;height:28px;border-radius:0 0 18px 18px;background:#0D0A12"></div>
+      <button id="car-next" aria-label="next screen" style="width:86px;height:54px;flex:none;border-radius:999px;border:1px solid rgba(255,255,255,0.85);background:linear-gradient(150deg,rgba(255,255,255,0.68),rgba(255,255,255,0.34));box-shadow:0 16px 34px rgba(150,90,88,0.15),inset 0 1px 0 rgba(255,255,255,0.92);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;z-index:5"><svg width="30" height="14" viewBox="0 0 30 14" fill="none"><path d="M0 7h27M22 1.5L27.5 7 22 12.5" stroke="#3A1F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:26px">
+      <button class="car-dot" aria-label="screen 1" style="width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;background:#3A1F5A;transition:background 0.3s"></button>
+      <button class="car-dot" aria-label="screen 2" style="width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;background:rgba(58,31,90,0.18);transition:background 0.3s"></button>
+      <button class="car-dot" aria-label="screen 3" style="width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;background:rgba(58,31,90,0.18);transition:background 0.3s"></button>
+      <button class="car-dot" aria-label="screen 4" style="width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;background:rgba(58,31,90,0.18);transition:background 0.3s"></button>
+      <button class="car-dot" aria-label="screen 5" style="width:8px;height:8px;border-radius:999px;border:none;padding:0;cursor:pointer;background:rgba(58,31,90,0.18);transition:background 0.3s"></button>
     </div>
   </div>
 
   <!-- statement block -->
-  <div style="max-width:720px;margin:0 auto;padding:130px 28px 0;text-align:center">
-    <p style="margin:0;font:400 29px/1.5 Roboto,sans-serif;color:#3A1F5A;text-wrap:pretty">njuta is the photo book that makes itself. the sorting happens on your phone &mdash; no cloud, no outside ai &mdash; and only the 30 you approve ever leave it.</p>
-    <p style="margin:36px 0 0;font:400 29px/1.5 Roboto,sans-serif;color:#B0A3BC;text-wrap:pretty">no scrolling. no albums to build. just a book in the mail, four times a year.</p>
+  <div class="m-sec" style="max-width:720px;margin:0 auto;padding:130px 28px 0;text-align:center;display:flex;flex-direction:column;align-items:center">
+    <div style="width:min(400px,100%);text-align:left;border-radius:26px;background:linear-gradient(150deg,rgba(255,255,255,0.8),rgba(255,255,255,0.45));border:1px solid rgba(255,255,255,0.95);box-shadow:0 18px 40px rgba(150,90,88,0.14),inset 0 1px 0 rgba(255,255,255,0.95);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);padding:28px 32px 30px;box-sizing:border-box">
+      <div ><img src="assets/jitzu/08-njuta.svg" alt="njuta" style="display:block;width:99.3px;max-width:100%;height:auto"></div>
+      <div style="margin-top:11px;font:italic 300 13px/1 Roboto,sans-serif;color:#8A7396">[nyoo-tah] &middot; swedish, verb</div>
+      <div style="margin-top:15px;font:400 16px/1.5 Roboto,sans-serif;color:#3A1F5A;text-wrap:pretty">to truly enjoy something &mdash; deeply, fully, without distraction.</div>
+      <div  style="margin-top:13px;;color:#C25A8E"><img src="assets/jitzu/09-enjoy-appreciate.svg" alt="enjoy. appreciate." style="display:block;width:99.3px;max-width:100%;height:auto"></div>
+    </div>
+    <p class="m-big" style="margin:56px 0 0;font:400 29px/1.5 Roboto,sans-serif;color:#3A1F5A;text-wrap:pretty">njuta does the heavy lifting for you: deciding which photos are worth printing. say goodbye to camera roll overwhelm, and hello to your new favorite keepsake.</p>
+    <p class="m-big" style="margin:36px 0 0;font:400 29px/1.5 Roboto,sans-serif;color:#B0A3BC;text-wrap:pretty">no more cleaning up hundreds of duplicate photos, no more fuss with layouts; this photo book solution was designed to maximize enjoyment and minimize work.</p>
   </div>
 
-  <!-- 2. the physical book — books drift, summer opens on scroll -->
-  <div id="book-section" style="height:1900px;margin-top:40px">
-    <div style="position:sticky;top:0;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 28px;box-sizing:border-box;overflow:clip;text-align:center">
-      <span style="font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#8A6FAE">the book</span>
-      <h2  style="margin:16px 0 0"><img src="assets/jitzu/06-made-to-be-held-not-scro.svg" alt="made to be held, not scrolled" style="display:block;width:438.3px;max-width:100%;height:auto"></h2>
-      <div style="position:relative;width:100%;height:440px;margin-top:40px">
-        <div id="bk-spring" role="img" aria-label="spring book cover" style="position:absolute;left:50%;top:50%;width:198px;aspect-ratio:236/314;margin:-132px 0 0 -99px;background-image:url('assets/cover-spring.png');background-size:cover;background-position:center;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26)"></div>
-        <div id="bk-summer" role="img" aria-label="summer book cover" style="position:absolute;left:50%;top:50%;width:198px;aspect-ratio:236/314;margin:-132px 0 0 -99px;background-image:url('assets/cover-summer-front.png');background-size:cover;background-position:center;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26)"></div>
-        <div id="bk-autumn" role="img" aria-label="autumn book cover" style="position:absolute;left:50%;top:50%;width:198px;aspect-ratio:236/314;margin:-132px 0 0 -99px;background-image:url('assets/cover-autumn.png');background-size:cover;background-position:center;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26)"></div>
-        <div id="bk-winter" role="img" aria-label="winter book cover" style="position:absolute;left:50%;top:50%;width:198px;aspect-ratio:236/314;margin:-132px 0 0 -99px;background-image:url('assets/cover-winter.png');background-size:cover;background-position:center;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26)"></div>
-        <img id="bk-spread" src="assets/welcome-spread-v2.png" alt="inside the summer book — a photo beside a handwritten journal entry" style="position:absolute;left:50%;top:50%;width:min(720px,92vw);transform:translate(-50%,-50%) scale(0.62);opacity:0;pointer-events:none">
-        <div style="position:absolute;left:50%;top:50%;width:min(720px,92vw);aspect-ratio:1399/1113;transform:translate(-50%,-50%);pointer-events:none">
-          <div id="bk-pill-1" class="bk-pill" style="position:absolute;right:-11%;top:12%;display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 24px;border-radius:999px">
-            <span style="width:8px;height:8px;border-radius:999px;background:#C25A8E"></span>
-            <span  style="white-space:nowrap"><img src="assets/jitzu/07-one-photo-one-page.svg" alt="one photo, one page" style="display:block;width:130.8px;max-width:100%;height:auto"></span>
-          </div>
-          <div id="bk-pill-2" class="bk-pill" style="position:absolute;left:-9%;bottom:14%;display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 24px;border-radius:999px">
-            <span  style="white-space:nowrap"><img src="assets/jitzu/08-the-date-the-place.svg" alt="the date &amp; the place" style="display:block;width:133.7px;max-width:100%;height:auto"></span>
-            <span style="width:8px;height:8px;border-radius:999px;background:#C25A8E"></span>
-          </div>
-          <div id="bk-pill-3" class="bk-pill" style="position:absolute;left:-16%;top:26%;display:inline-flex;align-items:center;gap:10px;height:42px;padding:0 24px;border-radius:999px">
-            <span  style="white-space:nowrap"><img src="assets/jitzu/09-room-for-your-words.svg" alt="room for your words" style="display:block;width:131.7px;max-width:100%;height:auto"></span>
-            <span style="width:8px;height:8px;border-radius:999px;background:#C25A8E"></span>
-          </div>
-        </div>
-      </div>
-      <div style="position:relative;margin-top:30px;width:min(440px,100%);min-height:78px">
-        <p id="bk-cap-a" style="position:absolute;inset:0;margin:0;font:300 16px/1.65 Roboto,sans-serif;color:#6E5B85;text-wrap:pretty">a special cover for each season of life.</p>
-        <p id="bk-cap-b" style="position:absolute;inset:0;margin:0;font:300 16px/1.65 Roboto,sans-serif;color:#6E5B85;text-wrap:pretty;opacity:0">every photo gets a dedicated page &mdash; and room beside it to write. a photo book and a journal: your season, your photos, your words</p>
-      </div>
+  <!-- 2a. the four seasonal covers -->
+  <div class="m-sec" style="max-width:1000px;margin:0 auto;padding:150px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+    <span style="font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#8A6FAE">about the book</span>
+    <h2  style="margin:16px 0 0"><img src="assets/jitzu/10-made-to-be-held-not-scro.svg" alt="made to be held, not scrolled" style="display:block;width:438.3px;max-width:100%;height:auto"></h2>
+    <div class="m-covers" style="display:flex;justify-content:center;align-items:center;margin-top:56px;padding:0 10px">
+      <div role="img" aria-label="summer book cover" class="m-cover" style="width:196px;aspect-ratio:236/314;background:url('assets/cover-summer-front.png') center/cover;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.3);transform:rotate(-8deg) translateY(-6px);z-index:3;transition:transform 0.35s cubic-bezier(0.22,0.61,0.36,1)"></div>
+      <div role="img" aria-label="autumn book cover" class="m-cover" style="width:196px;aspect-ratio:236/314;background:url('assets/cover-autumn.png') center/cover;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26);transform:rotate(4deg) translateY(16px);margin-left:-30px;z-index:2;transition:transform 0.35s cubic-bezier(0.22,0.61,0.36,1)"></div>
+      <div role="img" aria-label="winter book cover" class="m-cover" style="width:196px;aspect-ratio:236/314;background:url('assets/cover-winter.png') center/cover;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26);transform:rotate(-5deg) translateY(-10px);margin-left:-26px;z-index:1;transition:transform 0.35s cubic-bezier(0.22,0.61,0.36,1)"></div>
+      <div role="img" aria-label="spring book cover" class="m-cover" style="width:196px;aspect-ratio:236/314;background:url('assets/cover-spring.png') center/cover;border-radius:8px 14px 14px 8px;box-shadow:0 24px 50px rgba(150,90,88,0.26);transform:rotate(9deg) translateY(18px);margin-left:-30px;z-index:0;transition:transform 0.35s cubic-bezier(0.22,0.61,0.36,1)"></div>
     </div>
+    <p style="margin:52px 0 0;font:300 16px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:440px;text-wrap:pretty">every three months, get mailed a seasonal book that is beautiful enough to display on your coffee table and in your bookshelves.</p>
+  </div>
+
+  <!-- 2b. inside the book -->
+  <div class="m-sec" style="max-width:900px;margin:0 auto;padding:130px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+    <img src="assets/welcome-spread-v2.png" alt="inside the summer book — a photo beside a handwritten journal entry" style="width:min(720px,92vw)">
+    <p style="margin:10px 0 0;font:300 16px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:520px;text-wrap:pretty">simple with a purpose: to honor one moment at a time on the right, and to journal or scrapbook on the left as you please. part photo book, part journal. books are printed on italian fedrigoni uncoated text paper, optimal for both photos and writing.</p>
   </div>
 
   <!-- how it works -->
-  <div style="max-width:900px;margin:0 auto;padding:130px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="m-sec" style="max-width:900px;margin:0 auto;padding:130px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
     <span style="font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#8A6FAE">how it works</span>
-    <h2 style="margin:16px 0 0;font:600 28px/1.2 Roboto,sans-serif;color:#3A1F5A">a season in, a book out</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:48px;width:100%">
+    <h2 style="margin:16px 0 0;font:600 28px/1.2 Roboto,sans-serif;color:#3A1F5A">how we help you njuta</h2>
+    <div class="m-steps" style="display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:48px;width:100%">
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
         <span style="font:500 12px/1 Roboto,sans-serif;letter-spacing:0.14em;color:#B0A3BC">01</span>
-        <div ><img src="assets/jitzu/10-the-sort.svg" alt="the sort" style="display:block;width:69.6px;max-width:100%;height:auto"></div>
-        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">all season, njuta quietly sorts your camera roll &mdash; on your phone, where your photos stay.</div>
+        <div ><img src="assets/jitzu/11-the-curation.svg" alt="the curation" style="display:block;width:109.9px;max-width:100%;height:auto"></div>
+        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">each season, njuta finds your 30 print-worthy moments</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
         <span style="font:500 12px/1 Roboto,sans-serif;letter-spacing:0.14em;color:#B0A3BC">02</span>
-        <div ><img src="assets/jitzu/11-your-30.svg" alt="your 30" style="display:block;width:72.0px;max-width:100%;height:auto"></div>
-        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">when the season wraps, the reveal: 30 moments, chosen from thousands. look through, swap any you like &mdash; or don&rsquo;t.</div>
+        <div ><img src="assets/jitzu/12-the-feedback.svg" alt="the feedback" style="display:block;width:116.7px;max-width:100%;height:auto"></div>
+        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">you have a window of time to edit the chosen 30 moments pre-print</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:10px">
         <span style="font:500 12px/1 Roboto,sans-serif;letter-spacing:0.14em;color:#B0A3BC">03</span>
-        <div ><img src="assets/jitzu/12-the-book.svg" alt="the book" style="display:block;width:77.4px;max-width:100%;height:auto"></div>
-        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">it ships as the season turns, captions printed for you &mdash; the place, the day, the date. $39 a season, pause anytime.</div>
+        <div ><img src="assets/jitzu/13-the-treat.svg" alt="the treat" style="display:block;width:79.0px;max-width:100%;height:auto"></div>
+        <div style="font:300 14.5px/1.65 Roboto,sans-serif;color:#6E5B85;max-width:240px;text-wrap:pretty">your book is printed &amp; mailed to your door, ready to let you &ldquo;njuta&rdquo;</div>
       </div>
     </div>
   </div>
 
   <!-- final CTA -->
-  <div style="max-width:760px;margin:0 auto;padding:140px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
-    <h2 style="margin:0;font:300 40px/1.3 Roboto,sans-serif;color:#3A1F5A;text-wrap:balance">your summer&rsquo;s almost over.<br>the book is the easy part.</h2>
-    <span style="margin-top:34px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;height:58px;padding:0 42px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.85),rgba(255,255,255,0.5));border:1px solid rgba(255,255,255,0.95);box-shadow:0 18px 40px rgba(150,90,88,0.18),inset 0 1px 0 rgba(255,255,255,0.95);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);font:700 16.5px/1 Roboto,sans-serif;color:#3A1F5A">coming soon to the app store</span>
+  <div class="m-sec" style="max-width:760px;margin:0 auto;padding:140px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+    <h2 class="m-cta" style="margin:0;font:300 40px/1.3 Roboto,sans-serif;color:#3A1F5A;text-wrap:balance">your summer is officially over, but your memories of it are only just beginning.</h2>
+    <span class="m-pill" style="margin-top:34px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;height:58px;padding:0 42px;border-radius:999px;background:linear-gradient(150deg,rgba(255,255,255,0.85),rgba(255,255,255,0.5));border:1px solid rgba(255,255,255,0.95);box-shadow:0 18px 40px rgba(150,90,88,0.18),inset 0 1px 0 rgba(255,255,255,0.95);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);font:700 16.5px/1 Roboto,sans-serif;color:#3A1F5A;gap:11px"><svg width="17" height="20" viewBox="0 0 24 28" fill="currentColor" aria-hidden="true" style="margin-top:-3px"><path d="M19.85 14.72c-.03-3.12 2.55-4.62 2.66-4.69-1.45-2.12-3.7-2.41-4.5-2.44-1.92-.2-3.74 1.13-4.71 1.13-.97 0-2.47-1.1-4.06-1.07-2.09.03-4.02 1.21-5.1 3.08-2.17 3.77-.55 9.35 1.57 12.41 1.03 1.5 2.27 3.18 3.89 3.12 1.56-.06 2.15-1 4.03-1s2.41 1 4.06.97c1.68-.03 2.74-1.53 3.77-3.03 1.19-1.74 1.68-3.42 1.71-3.5-.04-.02-3.29-1.27-3.32-4.98zM16.74 5.55c.86-1.05 1.45-2.5 1.29-3.95-1.25.05-2.76.83-3.66 1.87-.8.93-1.5 2.41-1.31 3.83 1.39.11 2.82-.71 3.68-1.75z"></path></svg>coming soon to the app store</span>
   </div>
 
   <!-- contact -->
-  <div style="max-width:760px;margin:0 auto;padding:110px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
+  <div class="m-sec" style="max-width:760px;margin:0 auto;padding:110px 28px 0;display:flex;flex-direction:column;align-items:center;text-align:center">
     <span style="font:500 11.5px/1 Roboto,sans-serif;letter-spacing:0.18em;text-transform:uppercase;color:#8A6FAE">contact</span>
-    <p style="margin:16px 0 0;font:400 21px/1.4 Roboto,sans-serif;color:#3A1F5A">say hej &mdash; <a href="mailto:hello@njutabook.com" style="color:#8A6FAE">hello@njutabook.com</a></p>
-    <p style="margin:10px 0 0;font:300 14px/1.6 Roboto,sans-serif;color:#8A7396;max-width:420px">questions about your book, your membership, or your photos &mdash; a person answers, usually within a day.</p>
+    <p style="margin:16px 0 0;font:400 21px/1.4 Roboto,sans-serif;color:#3A1F5A">say &ldquo;hej&rdquo; by emailing us at <a href="mailto:hello@njutabook.com" style="color:#8A6FAE">hello@njutabook.com</a></p>
+    <p style="margin:10px 0 0;font:300 14px/1.6 Roboto,sans-serif;color:#8A7396;max-width:420px">real humans are here to answer your questions</p>
   </div>
 
   <!-- footer -->
@@ -286,5 +305,38 @@ a:hover{color:#3A1F5A}
     </div>
   </div>
 </div>
+<script>
+(function(){
+  var TITLES=[['your moments','found for you'],['review your top 30','in one scroll'],['swap out','moments'],['review & pick','from a curated pool'],['get a mailed book','to your door']];
+  var DUR=[8600,8600,7200,7200,9000];
+  var idx=0,out=false,tm,tm2;
+  var unit=document.getElementById('car-unit');
+  var t1=document.getElementById('car-t1'),t2=document.getElementById('car-t2');
+  var scrs=[].slice.call(document.querySelectorAll('.car-scr'));
+  var dots=[].slice.call(document.querySelectorAll('.car-dot'));
+  function apply(){
+    t1.textContent=TITLES[idx][0]; t2.textContent=TITLES[idx][1];
+    scrs.forEach(function(s,n){ s.style.display = n===idx ? '' : 'none'; });
+    dots.forEach(function(d,n){ d.style.background = n===idx ? '#3A1F5A' : 'rgba(58,31,90,0.18)'; });
+  }
+  function arm(){ clearTimeout(tm); tm=setTimeout(function(){ go(1); }, DUR[idx]); }
+  function slideTo(n){
+    if(out) return; out=true; clearTimeout(tm);
+    unit.style.animation='slideOutL 0.37s cubic-bezier(0.4,0,1,1) both';
+    clearTimeout(tm2);
+    tm2=setTimeout(function(){
+      idx=n; apply();
+      unit.style.animation='slideInR 0.5s cubic-bezier(0.22,0.61,0.36,1) both';
+      out=false; arm();
+    },370);
+  }
+  function go(d){ slideTo((idx+d+5)%5); }
+  document.getElementById('car-prev').addEventListener('click',function(){ go(-1); });
+  document.getElementById('car-next').addEventListener('click',function(){ go(1); });
+  dots.forEach(function(d,n){ d.addEventListener('click',function(){ if(n!==idx) slideTo(n); }); });
+  var reduced=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduced) arm();
+})();
+</script>
 </body>
 </html>
