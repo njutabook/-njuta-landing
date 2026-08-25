@@ -89,7 +89,7 @@ a:hover{color:#3A1F5A}
       <button id="car-prev" aria-label="previous screen" style="width:86px;height:54px;flex:none;border-radius:999px;border:1px solid rgba(255,255,255,0.85);background:linear-gradient(150deg,rgba(255,255,255,0.68),rgba(255,255,255,0.34));box-shadow:0 16px 34px rgba(150,90,88,0.15),inset 0 1px 0 rgba(255,255,255,0.92);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;z-index:5"><svg width="30" height="14" viewBox="0 0 30 14" fill="none"><path d="M30 7H3M8 1.5L2.5 7 8 12.5" stroke="#3A1F5A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path></svg></button>
       <div id="car-unit" style="display:flex;flex-direction:column;align-items:center;animation:slideInR 0.5s cubic-bezier(0.22,0.61,0.36,1) both">
         <div style="display:flex;flex-direction:column;align-items:center;gap:7px;min-height:72px;justify-content:flex-end;padding-bottom:24px;text-align:center">
-          <span id="car-t1" ><img src="assets/jitzu/02-your-moments.svg" alt="your moments" style="display:inline-block;vertical-align:top;width:203.1px;max-width:100%;height:auto"></span>
+          <span id="car-t1" ><img src="assets/jitzu/car-title-0.svg" alt="your moments" style="display:inline-block;vertical-align:top;width:203.1px;max-width:100%;height:auto"></span>
           <span id="car-t2" style="font:300 21px/1.2 Roboto,sans-serif;color:#3A1F5A">found for you</span>
         </div>
         <div class="m-phone" style="position:relative;width:328px;height:690px;border-radius:52px;background:#0D0A12;padding:9px;box-sizing:border-box;box-shadow:0 40px 90px rgba(150,90,88,0.3),0 8px 24px rgba(45,22,66,0.18)">
@@ -321,7 +321,7 @@ a:hover{color:#3A1F5A}
 </div>
 <script>
 (function(){
-  var TITLES=[['your moments','found for you'],['review your top 30','in one scroll'],['swap out','moments'],['review & pick','from a curated pool'],['get a mailed book','to your door']];
+  var TITLES=[['your moments','found for you'],['review your top 30','in one scroll'],['swap out','moments'],['review & pick','from a curated pool'],['get a mailed book','to your door']];var T1IMG=[['assets/jitzu/car-title-0.svg','your moments',203.1],['assets/jitzu/car-title-1.svg','review your top 30',268.6],['assets/jitzu/car-title-2.svg','swap out',130.3],['assets/jitzu/car-title-3.svg','review & pick',194.8],['assets/jitzu/car-title-4.svg','get a mailed book',258.8]];
   var DUR=[8600,8600,7200,7200,9000];
   var idx=0,out=false,tm,tm2;
   var unit=document.getElementById('car-unit');
@@ -329,7 +329,7 @@ a:hover{color:#3A1F5A}
   var scrs=[].slice.call(document.querySelectorAll('.car-scr'));
   var dots=[].slice.call(document.querySelectorAll('.car-dot'));
   function apply(){
-    t1.textContent=TITLES[idx][0]; t2.textContent=TITLES[idx][1];
+    t1.innerHTML='<img src="'+T1IMG[idx][0]+'" alt="'+T1IMG[idx][1]+'" style="display:inline-block;vertical-align:top;width:'+T1IMG[idx][2]+'px;max-width:100%;height:auto">'; t2.textContent=TITLES[idx][1];
     scrs.forEach(function(s,n){ s.style.display = n===idx ? '' : 'none'; });
     dots.forEach(function(d,n){ d.style.background = n===idx ? '#3A1F5A' : 'rgba(58,31,90,0.18)'; });
   }
