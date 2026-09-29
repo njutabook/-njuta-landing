@@ -332,7 +332,7 @@
 <main>
   <div class="eyebrow">Legal</div>
   <h1 id="top">Privacy Policy</h1>
-  <p class="updated">Last updated August 3, 2026</p>
+  <p class="updated">Last updated September 29, 2026</p>
 
   <p class="lede">
     This Privacy Policy for Njuta LLC ("njuta," "we," "us," or "our") describes how and why
@@ -375,7 +375,7 @@
     </div>
     <div class="summary-item">
       <strong>The only photos that ever reach our servers are the ones you approve for your printed book.</strong>
-      <p>When you claim a season, the roughly 30 photos in your book (and any later swaps you make) are uploaded over an encrypted connection so we can print it. Uploaded source photos are deleted from our servers 30 days after your book ships; your finished book file is kept while your account exists, so your past books stay viewable in the app and can be reprinted — and it is deleted when you delete your account. Learn more in Sections 2 and 7.</p>
+      <p>When you claim a season, the roughly 30 photos in your book (and any later swaps you make) are uploaded over an encrypted connection so we can print it. Your book photos and your finished book file are kept for as long as your account exists, so your past books stay viewable in the app and can be reprinted — and they are deleted when you delete your account. Learn more in Sections 2 and 7.</p>
     </div>
     <div class="summary-item">
       <strong>A human being looks at your book before it prints.</strong>
@@ -399,7 +399,7 @@
     </div>
     <div class="summary-item">
       <strong>In what situations and with which parties do we share personal information?</strong>
-      <p>Only with the service providers needed to run njuta — our payment processor (Stripe), infrastructure provider (Supabase), transactional email provider (Resend), privacy-focused analytics provider (TelemetryDeck), website form provider (Formspree), and the print shop that prints and helps ship your book. Learn more in Section 5.</p>
+      <p>Only with the service providers needed to run njuta — our payment processor (Stripe), infrastructure provider (Supabase), render-processing provider (GitHub), transactional email provider (Resend), privacy-focused analytics provider (TelemetryDeck), website form provider (Formspree), and the print shop that prints and helps ship your book. Learn more in Section 5.</p>
     </div>
     <div class="summary-item">
       <strong>How do we keep your information safe?</strong>
@@ -458,14 +458,14 @@
 
   <section id="section-2">
     <h2><span class="num">2.</span> On-device processing: your photo library</h2>
-    <div class="in-short"><strong>In Short:</strong> Your library never leaves your phone. Only the photos you approve for printing are uploaded, they are used only to make your book, and a human reviews the final print file before production. Uploaded source photos are deleted 30 days after your book ships; your finished book file is kept while your account exists so your shelf and reprints always work, and is deleted when you delete your account.</div>
+    <div class="in-short"><strong>In Short:</strong> Your library never leaves your phone. Only the photos you approve for printing are uploaded, they are used only to make your book, and a human reviews the final print file before production. Your book photos and finished book file are kept while your account exists so your shelf and reprints always work, and are deleted when you delete your account.</div>
     <p>This section describes the complete life cycle of your photos, because it is the heart of both the product and this policy.</p>
     <p><strong>On your device.</strong> When you grant photo access, njuta scans and sorts your library — analyzing image quality, detecting faces, grouping similar shots, recognizing which people appear most often in your photos, and screening potentially sensitive images out of view — entirely on your iPhone, using Apple's on-device frameworks. No photo, thumbnail, face data, or analysis result from this process is transmitted to us or to anyone else. Face-recognition groupings exist only on your device, are used only to improve which photos are chosen for you, and are never uploaded. If you never claim a book, nothing about your photos ever leaves your device.</p>
     <p><strong>When you claim a season.</strong> After you approve your book and pay, the app uploads the approved photos (approximately 30) to our servers over an encrypted connection, so that a printable copy of your book exists even if you never open the app again. Before each photo is uploaded, the app strips its embedded metadata — including GPS coordinates — from the file, and sends only the photo itself along with a capture date and a general place name derived on your device for the printed caption. If you later change your book — including during the adjustment window after your season ends — the app quietly uploads only the changed photos. Uploaded photos are stored in private, encrypted storage that is accessible only through short-lived, authenticated links scoped to your account.</p>
     <p><strong>What we use uploaded photos for.</strong> One thing: producing and shipping your printed book. We do not use your photos to train machine-learning models, we do not analyze them for advertising or profiling, we do not share them with any artificial-intelligence service, and we do not sell or license them. You retain all rights you have in your photos; you grant us only the limited permission needed to store, format, review, print, and ship them as your book.</p>
     <p><strong>Human review before printing.</strong> Before each season's books are sent to production, authorized Njuta personnel review the final print files. This review exists to (a) ensure print quality, and (b) screen for content that we or our print partner cannot lawfully or contractually print (for example, sexually explicit imagery or content that is illegal to reproduce). This is the only routine circumstance in which a person at Njuta views your photos. Personnel performing this review are bound by confidentiality obligations. We may also access your uploaded photos when you ask us to (for example, a support request about your order) or where required by law.</p>
     <p><strong>Locking and printing.</strong> At the close of your season's adjustment window, your book is locked and rendered into a print file. The print file and shipping details are provided to our print partner solely to print and ship your book.</p>
-    <p><strong>Retention and deletion.</strong> The uploaded source photos are automatically deleted from our servers 30 days after your book ships (or promptly if you cancel before printing). Your finished book — the rendered file exactly as it was printed — is kept for as long as your account exists, for two purposes only: so your past books remain reliably viewable in the app, and so you can reorder a printed copy of a past season. Everything — source photos, book files, and your account — is deleted if you delete your account. Deletion is enforced by an automated process, not a manual promise.</p>
+    <p><strong>Retention and deletion.</strong> Your uploaded book photos and your finished book — the rendered file exactly as it was printed — are kept for as long as your account exists, for two purposes only: so your past books remain reliably viewable in the app, and so you can reorder a printed copy of a past season. If you cancel an order before it prints, the photos for that order are deleted promptly. Everything — photos, book files, and your account — is deleted if you delete your account. Deletion is enforced by an automated process, not a manual promise.</p>
     <a class="back-to-top" href="#top">↑ Back to top</a>
   </section>
 
@@ -531,6 +531,11 @@
             <td>To deliver service emails such as your season-wrap notice</td>
           </tr>
           <tr>
+            <td>GitHub (automated render processing)</td>
+            <td>Your book photos, caption data, and shipping name and address, only for the few minutes it takes to produce your print file; nothing is retained afterward</td>
+            <td>To run the automated process that turns your locked book into a print-ready file. <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a></td>
+          </tr>
+          <tr>
             <td>TelemetryDeck (analytics)</td>
             <td>Anonymized product events with a salted, one-way device identifier and basic device info — no identity, no photos, no location, no advertising identifiers</td>
             <td>To help us understand app usage in aggregate</td>
@@ -566,10 +571,10 @@
 
   <section id="section-7">
     <h2><span class="num">7.</span> How long do we keep your information?</h2>
-    <div class="in-short"><strong>In Short:</strong> Uploaded source photos: 30 days after your book ships, then automatically deleted. Your finished book file: kept while your account exists, so your shelf and reprints always work; deleted when you delete your account. Account and order records: for as long as you have an account, plus what tax and bookkeeping law requires.</div>
+    <div class="in-short"><strong>In Short:</strong> Your book photos and finished book files: kept while your account exists, so your shelf and reprints always work; deleted when you delete your account. Account and order records: for as long as you have an account, plus what tax and bookkeeping law requires.</div>
     <p>We keep personal information only as long as necessary for the purposes described in this policy, unless a longer period is required or permitted by law. Specifically:</p>
     <ul>
-      <li><strong>Uploaded source photos:</strong> automatically deleted 30 days after your book ships. To be precise about the full window: your book photos are held on our servers from the moment you claim your season (or later sync a change) through the end of the season, its adjustment window, printing, and shipping, plus 30 days — so a photo uploaded early in a season may be held for several months before the ship-plus-30-days deletion runs. If you cancel an order before it prints, the photos for that order are deleted promptly. If you delete your account, they are deleted as part of account deletion.</li>
+      <li><strong>Uploaded book photos:</strong> retained for as long as your account exists, so your past books remain viewable in the app and reprintable. If you cancel an order before it prints, the photos for that order are deleted promptly. Deleted when you delete your account.</li>
       <li><strong>Finished book files:</strong> the rendered file of each book, exactly as printed, is retained for as long as your account exists, solely so that your past books remain viewable in the app and so you can order a reprint of a past season. Deleted when you delete your account.</li>
       <li><strong>Account information</strong> (account record, display name, Apple sign-in linkage): retained while your account exists; deleted when you delete your account.</li>
       <li><strong>Order and payment records</strong> (what was purchased, amount, date, shipping destination, Stripe references): retained for as long as needed for bookkeeping, tax, accounting, refund, and dispute-resolution purposes, as required or permitted by law, even after account deletion.</li>
