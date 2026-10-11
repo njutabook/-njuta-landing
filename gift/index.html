@@ -1,0 +1,59 @@
+---
+layout: default
+title: your njuta gift
+permalink: /gift/
+---
+<!-- njuta 2.0 · Step 2 (gate s2-7): the per-gift link page, PLAIN. Reads the
+     gift through the public gift-link function (recipient name, what it is,
+     the code, redeemed?) — nothing else about anyone. The polished page and
+     the iMessage preview image follow Blake's gifting designs (E-web). -->
+<meta property="og:title" content="someone gave you njuta">
+<meta property="og:description" content="a printed book of your season's best photos — picked for you. open to see your gift.">
+<meta property="og:image" content="https://njutabook.com/assets/cover2-autumn.png">
+<meta name="twitter:card" content="summary_large_image">
+<section class="gift" style="max-width:560px;margin:0 auto;padding:32px 20px;font-family:Roboto,system-ui,sans-serif">
+  <p id="gift-eyebrow" style="letter-spacing:.14em;text-transform:uppercase;font-size:12px;opacity:.7">a gift</p>
+  <h1 id="gift-title" style="font-family:Fraunces,serif;font-weight:500;font-size:36px;line-height:1.1;margin:8px 0 16px">loading your gift…</h1>
+  <p id="gift-body" style="font-size:17px;line-height:1.5"></p>
+  <div id="gift-code-box" style="display:none;margin:24px 0;padding:18px 20px;border:1px solid rgba(0,0,0,.14);border-radius:16px">
+    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">your code</div>
+    <div id="gift-code" style="font-family:ui-monospace,Menlo,monospace;font-size:28px;letter-spacing:.08em;margin-top:6px"></div>
+    <div style="font-size:14px;opacity:.75;margin-top:8px">njuta asks for it when you start — no card needed, and it never expires.</div>
+  </div>
+  <p id="gift-steps" style="display:none;font-size:16px;line-height:1.6">
+    1. get njuta on the app store<br>
+    2. sign in with your email or apple<br>
+    3. tap “have a code?” and enter the code above<br>
+    your first book is the season you open it in.
+  </p>
+  <p id="gift-cta" style="display:none;margin-top:24px"><a id="gift-store" href="https://apps.apple.com/us/app/njuta/id6798137166" style="display:inline-block;padding:14px 22px;border-radius:999px;background:#0D0A12;color:#fff;text-decoration:none;font-weight:500">get njuta</a>
+    &nbsp; <a id="gift-card-link" href="#" style="font-size:14px">print a card</a></p>
+  <p id="gift-note" style="font-size:13px;opacity:.65;margin-top:32px"></p>
+</section>
+<script>
+(function () {
+  var qs = new URLSearchParams(location.search);
+  var token = qs.get("t") || "";
+  // the API: production by default; ?api=test for QA against njuta-test
+  var api = qs.get("api") === "test" ? "https://ptwcejhckhhpnzqukjfc.supabase.co" : "https://hnjbtkiddmbosusetnor.supabase.co";
+  var $ = function (id) { return document.getElementById(id); };
+  var label = function (n) { return n === 4 ? "a year of njuta — four printed books" : "one printed njuta book"; };
+  if (!/^[0-9a-f]{32}$/.test(token)) { $("gift-title").textContent = "hm — this gift link isn't complete."; $("gift-body").textContent = "ask whoever sent it to share the link again."; return; }
+  fetch(api + "/functions/v1/gift-link?t=" + token).then(function (r) { return r.ok ? r.json() : null; }).then(function (g) {
+    if (!g) { $("gift-title").textContent = "we couldn't find that gift."; $("gift-body").textContent = "the link may be mistyped — ask whoever sent it to share it again."; return; }
+    var from = g.buyer_name ? g.buyer_name : "someone who loves you";
+    $("gift-eyebrow").textContent = "a gift from " + from;
+    $("gift-title").textContent = "hej " + g.recipient_name + " — " + from + " gave you njuta.";
+    $("gift-body").textContent = label(g.books) + ": your season's best photos, found for you and printed into a book you'll keep.";
+    if (g.redeemed) {
+      $("gift-note").textContent = "this gift has been opened — enjoy the book.";
+    } else if (g.code) {
+      $("gift-code").textContent = g.code; $("gift-code-box").style.display = "block"; $("gift-steps").style.display = "block"; $("gift-cta").style.display = "block";
+      $("gift-card-link").href = "/gift/card/?t=" + token + (qs.get("api") ? "&api=" + qs.get("api") : "");
+    } else {
+      $("gift-note").textContent = "this gift is on its way — check back in a moment.";
+    }
+    if (g.app_store_url) $("gift-store").href = g.app_store_url;
+  }).catch(function () { $("gift-title").textContent = "we couldn't reach njuta right now."; $("gift-body").textContent = "try again in a minute."; });
+})();
+</script>

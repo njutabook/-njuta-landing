@@ -1,0 +1,67 @@
+---
+layout: null
+title: njuta gift card
+permalink: /gift/card/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>njuta — a gift card to print</title>
+<!-- njuta 2.0 · Step 2 (gate s2-7): the printable fold-up card, PLAIN. Letter /
+     A4 landscape, folds once; the inside carries the code. The designed card
+     follows Blake's gifting handoffs (E-web). -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  @page { size: landscape; margin: 12mm; }
+  html, body { margin: 0; background: #f4f1ec; font-family: Roboto, system-ui, sans-serif; color: #0D0A12; }
+  .sheet { width: 254mm; height: 170mm; margin: 16px auto; background: #fff; display: grid; grid-template-columns: 1fr 1fr; position: relative; box-shadow: 0 2px 20px rgba(0,0,0,.08); }
+  .fold { position: absolute; left: 50%; top: 0; bottom: 0; border-left: 1px dashed rgba(0,0,0,.18); }
+  .panel { padding: 22mm 18mm; display: flex; flex-direction: column; justify-content: center; }
+  .front { background: #0D0A12; color: #fff; }
+  .eyebrow { letter-spacing: .16em; text-transform: uppercase; font-size: 11px; opacity: .75; }
+  h1 { font-family: Fraunces, serif; font-weight: 500; font-size: 34px; line-height: 1.1; margin: 10px 0 0; }
+  .inside p { font-size: 15px; line-height: 1.55; }
+  .code { font-family: ui-monospace, Menlo, monospace; font-size: 26px; letter-spacing: .1em; padding: 12px 16px; border: 1px solid rgba(0,0,0,.18); border-radius: 12px; display: inline-block; margin: 10px 0; }
+  .how { font-size: 13px; opacity: .8; }
+  .print { text-align: center; margin: 12px; font-size: 14px; }
+  @media print { .print { display: none; } body { background: #fff; } .sheet { box-shadow: none; margin: 0; } }
+</style>
+</head>
+<body>
+<p class="print"><a href="#" onclick="window.print();return false;">print this card</a> · fold along the dotted line</p>
+<div class="sheet">
+  <div class="fold"></div>
+  <div class="panel front">
+    <div class="eyebrow">a gift from <span id="from">someone who loves you</span></div>
+    <h1 id="headline">a season of your best photos, printed.</h1>
+    <p style="opacity:.8;margin-top:16px;font-size:14px">njuta · njutabook.com</p>
+  </div>
+  <div class="panel inside">
+    <div class="eyebrow">for <span id="to">you</span></div>
+    <p id="what" style="margin-top:6px">one printed njuta book — your season's best photos, found for you.</p>
+    <div class="code" id="code">······</div>
+    <p class="how">get njuta on the app store · sign in · tap “have a code?” · enter the code. no card needed — it never expires.</p>
+    <p class="how" id="link"></p>
+  </div>
+</div>
+<script>
+(function () {
+  var qs = new URLSearchParams(location.search);
+  var token = qs.get("t") || "";
+  var api = qs.get("api") === "test" ? "https://ptwcejhckhhpnzqukjfc.supabase.co" : "https://hnjbtkiddmbosusetnor.supabase.co";
+  if (!/^[0-9a-f]{32}$/.test(token)) return;
+  fetch(api + "/functions/v1/gift-link?t=" + token).then(function (r) { return r.ok ? r.json() : null; }).then(function (g) {
+    if (!g) return;
+    document.getElementById("to").textContent = g.recipient_name;
+    if (g.buyer_name) document.getElementById("from").textContent = g.buyer_name;
+    document.getElementById("what").textContent = (g.books === 4 ? "a year of njuta — four printed books" : "one printed njuta book") + ": your season's best photos, found for you.";
+    document.getElementById("code").textContent = g.code || "······";
+    document.getElementById("link").textContent = "or open it at njutabook.com/gift/?t=" + token;
+  });
+})();
+</script>
+</body>
+</html>
