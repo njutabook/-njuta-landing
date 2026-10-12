@@ -18,7 +18,9 @@ permalink: /gift/
   <div id="gift-code-box" style="display:none;margin:24px 0;padding:18px 20px;border:1px solid rgba(0,0,0,.14);border-radius:16px">
     <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7">your code</div>
     <div id="gift-code" style="font-family:ui-monospace,Menlo,monospace;font-size:28px;letter-spacing:.08em;margin-top:6px"></div>
-    <div style="font-size:14px;opacity:.75;margin-top:8px">njuta asks for it when you start — no card needed, and it never expires.</div>
+    <!-- F1 (Blake, Oct 12): links that open the app directly come with the follow-up update; until then the code is one tap to copy -->
+    <button id="gift-copy" type="button" style="margin-top:12px;padding:10px 18px;border-radius:999px;border:1px solid rgba(0,0,0,.18);background:transparent;font:inherit;font-size:14px;cursor:pointer">copy code</button>
+    <div style="font-size:14px;opacity:.75;margin-top:10px">njuta asks for it when you start — no card needed, and it never expires.</div>
   </div>
   <p id="gift-steps" style="display:none;font-size:16px;line-height:1.6">
     1. get njuta on the app store<br>
@@ -37,6 +39,11 @@ permalink: /gift/
   // the API: production by default; ?api=test for QA against njuta-test
   var api = qs.get("api") === "test" ? "https://ptwcejhckhhpnzqukjfc.supabase.co" : "https://hnjbtkiddmbosusetnor.supabase.co";
   var $ = function (id) { return document.getElementById(id); };
+  var fallbackCopy = function (text, done) {
+    var r = document.createRange(); r.selectNodeContents($("gift-code"));
+    var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    try { if (document.execCommand("copy")) done(); } catch (e) { /* the code stays selected for a long-press copy */ }
+  };
   var label = function (n) { return n === 4 ? "a year of njuta — four printed books" : "one printed njuta book"; };
   if (!/^[0-9a-f]{32}$/.test(token)) { $("gift-title").textContent = "hm — this gift link isn't complete."; $("gift-body").textContent = "ask whoever sent it to share the link again."; return; }
   fetch(api + "/functions/v1/gift-link?t=" + token).then(function (r) { return r.ok ? r.json() : null; }).then(function (g) {
@@ -50,6 +57,11 @@ permalink: /gift/
     } else if (g.code) {
       $("gift-code").textContent = g.code; $("gift-code-box").style.display = "block"; $("gift-steps").style.display = "block"; $("gift-cta").style.display = "block";
       $("gift-card-link").href = "/gift/card/?t=" + token + (qs.get("api") ? "&api=" + qs.get("api") : "");
+      $("gift-copy").onclick = function () {
+        var done = function () { $("gift-copy").textContent = "copied"; setTimeout(function () { $("gift-copy").textContent = "copy code"; }, 1800); };
+        if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(g.code).then(done, function () { fallbackCopy(g.code, done); }); }
+        else fallbackCopy(g.code, done);
+      };
     } else {
       $("gift-note").textContent = "this gift is on its way — check back in a moment.";
     }
